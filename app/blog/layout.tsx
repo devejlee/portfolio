@@ -5,8 +5,8 @@ interface BlogLayoutProps {
   children: ReactNode
 }
 
-export default function BlogLayout({ children }: BlogLayoutProps) {
-  return (
-    <div>{children}</div>
-  );
-}
+const BlogLayout = ({ children }: BlogLayoutProps) => (
+  <div>{children}</div>
+);
+
+export default BlogLayout

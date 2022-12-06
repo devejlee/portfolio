@@ -1,3 +1,5 @@
-export default function Page() {
-  return <div>This is a blog page</div>;
-}
+const BlogPage = () => (
+  <div>This is a blog page</div>
+)
+
+export default BlogPage

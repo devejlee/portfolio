@@ -5,11 +5,11 @@ interface RootLayoutProps {
   children: ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
-  return (
-    <html lang="en">
-      <head />
-      <body>{children}</body>
-    </html>
-  );
-}
+const RootLayout = ({ children }: RootLayoutProps) => (
+  <html lang="en">
+    <head />
+    <body>{children}</body>
+  </html>
+)
+
+export default RootLayout
