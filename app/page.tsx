@@ -1,7 +1,9 @@
-import HomePage from "./Homepage";
+import { Intro } from '@components/Intro/Intro'
 
 const Page = () => (
-  <HomePage />
+  <>
+    <Intro />
+  </>
 )
 
 export default Page

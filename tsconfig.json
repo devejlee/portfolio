@@ -21,6 +21,7 @@
     "incremental": true,
     "paths": {
       "@api/*": ["api/*"],
+      "@app/*": ["app/*"],
       "@hooks/*": ["hooks/*"],
       "@typedef/*": ["typedef/*"],
       "@components/*": ["components/*"],
