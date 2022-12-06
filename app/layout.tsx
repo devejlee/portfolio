@@ -1,3 +1,4 @@
+import GlobalHeader from "@components/GlobalHeader/GlobalHeader";
 import '@styles/globals.scss'
 import { ReactNode } from "react";
 
@@ -8,7 +9,10 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="en">
     <head />
-    <body>{children}</body>
+    <body>
+      <GlobalHeader />
+      {children}
+    </body>
   </html>
 )
 
