@@ -1,4 +1,4 @@
-import GlobalHeader from "@components/GlobalHeader/GlobalHeader";
+import { GlobalHeader } from "@components/GlobalHeader/GlobalHeader";
 import '@styles/globals.scss'
 import { ReactNode } from "react";
 

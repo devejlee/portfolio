@@ -1,4 +1,4 @@
-import GlobalNav from "@components/GlobalNav/GlobalNav";
+import { GlobalNav } from "@components/GlobalNav/GlobalNav";
 
 const GlobalHeader = () => {
   return (
@@ -8,4 +8,4 @@ const GlobalHeader = () => {
   );
 };
 
-export default GlobalHeader
+export { GlobalHeader }
