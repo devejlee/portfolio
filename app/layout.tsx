@@ -10,9 +10,11 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="en">
     <head />
-    <body className={styles.wrapper}>
-      <GlobalHeader />
-      {children}
+    <body>
+      <div className={styles.wrapper}>
+        <GlobalHeader />
+        {children}
+      </div>
     </body>
   </html>
 )

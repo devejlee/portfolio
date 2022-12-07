@@ -1,4 +1,8 @@
 .wrapper {
-  border: 1px solid red;
-  padding: 0 4rem;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }

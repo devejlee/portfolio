@@ -1,7 +1,9 @@
+import styles from "@components/Intro/Intro.module.scss"
+
 const Intro = () => (
-  <section>
-    <p>Hi! I&apos;m Elijah.</p>
-    <p>A frontend developer who loves learning</p>
+  <section className={styles.wrapper}>
+    <h2>Hi! I&apos;m Elijah,</h2>
+    <p>I am a frontend developer. Let&apos;s build something great together</p>
   </section>
 )
 

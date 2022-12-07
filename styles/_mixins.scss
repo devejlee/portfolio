@@ -1,0 +1,34 @@
+// 30 * 16 = 480
+@mixin min-width-30rem {
+  @media (min-width: 30rem) {
+      @content;
+  }
+}
+
+// 40 * 16 = 640
+@mixin min-width-40rem {
+  @media (min-width: 40rem) {
+      @content;
+  }
+}
+
+// 50 * 16 = 800
+@mixin min-width-50rem {
+  @media (min-width: 50rem) {
+      @content;
+  }
+}
+
+// 60 * 16 = 960
+@mixin min-width-60rem {
+  @media (min-width: 60rem) {
+      @content;
+  }
+}
+
+// 70 * 16 = 1120
+@mixin min-width-70rem {
+  @media (min-width: 70rem) {
+      @content;
+  }
+}

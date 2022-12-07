@@ -1,8 +1,9 @@
+import styles from '@components/GlobalNav/GlobalNav.module.scss'
 import Link from "next/link";
 
 const GlobalNav = () => {
   return (
-    <nav>
+    <nav className={styles.globalNav}>
       <ul>
         <li>
           <Link href="/">

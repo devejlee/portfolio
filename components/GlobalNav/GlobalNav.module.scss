@@ -1,0 +1,13 @@
+.globalNav {
+  border: 1px solid red;
+  ul {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    a {
+      display: block;
+      margin-right: 1rem;
+      border: 1px solid red;
+    }
+  }
+}
