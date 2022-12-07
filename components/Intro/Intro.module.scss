@@ -1,9 +1,17 @@
+@import "@styles/mixins";
+
 .wrapper {
   border: 1px solid red;
   h2 {
-    font-size: var(--font-size-900);
+    font-size: var(--font-size-700);
+    @include xl {
+      font-size: var(--font-size-900);
+    }
   }
   p {
-    font-size: var(--font-size-500);
+    font-size: var(----font-size-400);
+    @include xl {
+      font-size: var(--font-size-500);
+    }
   }
 }

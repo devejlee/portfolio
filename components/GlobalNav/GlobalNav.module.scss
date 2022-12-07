@@ -1,3 +1,5 @@
+@import "@styles/mixins";
+
 .globalNav {
   border: 1px solid red;
   ul {
@@ -8,6 +10,10 @@
       display: block;
       margin-right: 1rem;
       border: 1px solid red;
+      font-size: var(--font-size-300);
+      @include xl {
+        font-size: var(--font-size-400);
+      }
     }
   }
 }
