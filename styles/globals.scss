@@ -2,15 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "utilities/mixins"; // imported first because layout uses mixins
-@import "base/colors";
-@import "base/layout";
-@import "base/typography";
+:root {
+  --font-size-300: 0.75rem; // 12px
+  --font-size-400: 1rem;    // 16px, base
+  --font-size-500: 1.25rem; // 20px
+  --font-size-600: 1.5rem;  // 24px
+  --font-size-700: 1.75rem; // 28px
+  --font-size-800: 2rem;    // 32px
+  --font-size-900: 2.25rem; // 36px
+  --white: #fff;
+  --purple-primary: #663552;
+  --purple-light: #95607e;
+  --purple-dark: #3a0c2a;
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
+  background: var(--purple-primary);
+  color: var(--white);
 }
 
 a {

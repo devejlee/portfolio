@@ -1,3 +1,4 @@
+import styles from "@app/layout.module.scss"
 import { GlobalHeader } from "@components/GlobalHeader/GlobalHeader";
 import { Inter } from "@next/font/google";
 import "@styles/globals.scss"
@@ -12,8 +13,8 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="en" className={inter.className}>
     <head />
-    <body className="bg-purple-primary">
-      <div className="wrapper mx-auto px-xl text-white">
+    <body>
+      <div className={styles.wrapper}>
         <GlobalHeader />
         {children}
       </div>
