@@ -1,4 +1,4 @@
-import { Intro } from '@components/Intro/Intro'
+import { Intro } from "@components/Intro/Intro"
 
 const Page = () => (
   <>

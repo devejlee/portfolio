@@ -1,4 +1,4 @@
-import '@styles/globals.scss'
+import "@styles/globals.scss"
 import { ReactNode } from "react";
 
 interface BlogLayoutProps {

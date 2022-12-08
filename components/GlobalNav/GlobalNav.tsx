@@ -1,4 +1,4 @@
-import styles from '@components/GlobalNav/GlobalNav.module.scss'
+import styles from "@components/GlobalNav/GlobalNav.module.scss"
 import Link from "next/link";
 
 const GlobalNav = () => {
