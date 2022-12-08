@@ -14,7 +14,7 @@ const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="en" className={inter.className}>
     <head />
     <body className="bg-purple-primary">
-      <div className={`${styles.wrapper} mx-auto text-white`}>
+      <div className={`${styles.wrapper} mx-auto px-xl text-white`}>
         <GlobalHeader />
         {children}
       </div>
