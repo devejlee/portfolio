@@ -6,6 +6,7 @@
   --spacing-xl: 2rem;
 }
 
+// padding
 .px-xs {
   @include padding-x(left, xs);
   @include padding-x(right, xs);
@@ -136,6 +137,7 @@
   padding-right: var(--spacing-xl);
 }
 
+// margin
 .mx-xs {
   @include margin-x(left, xs);
   @include margin-x(right, xs);
@@ -250,7 +252,6 @@
   @include margin-y(bottom, xl);
 }
 
-
 .mt-xl {
   margin-top: var(--spacing-xl);
 }
@@ -270,4 +271,15 @@
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+// wrapper
+.wrapper {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include xl {
+    max-width: 75rem;
+  }
 }
