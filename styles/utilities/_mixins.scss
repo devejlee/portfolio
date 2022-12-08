@@ -37,35 +37,14 @@
   padding-#{$property}: var(--spacing-#{$size});
 }
 
-@mixin padding($size) {
-  @include padding-x(left, $size);
-  @include padding-x(right, $size);
-}
-
 @mixin padding-y($property, $size) {
   padding-#{$property}: var(--spacing-#{$size});
-}
-
-@mixin padding($size) {
-  @include padding-y(top, $size);
-  @include padding-y(bottom, $size);
 }
 
 @mixin margin-x($property, $size) {
   margin-#{$property}: var(--spacing-#{$size});
 }
 
-@mixin margin($size) {
-  @include margin-x(left, $size);
-  @include margin-x(right, $size);
-}
-
 @mixin margin-y($property, $size) {
   margin-#{$property}: var(--spacing-#{$size});
 }
-
-@mixin margin($size) {
-  @include margin-y(top, $size);
-  @include margin-y(bottom, $size);
-}
-
