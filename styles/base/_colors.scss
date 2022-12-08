@@ -1,0 +1,14 @@
+:root {
+  --white: #fff;
+  --purple-primary: #663552;
+  --purple-light: #95607e;
+  --purple-dark: #3a0c2a;
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.bg-purple-primary {
+  background-color: var(--purple-primary);
+}

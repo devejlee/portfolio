@@ -1,11 +1,10 @@
-@import "@styles/mixins";
+@import "@styles/utilities/mixins";
 
 .wrapper {
   border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
   padding: 0 2rem;
   @include xl {
     max-width: 75rem;

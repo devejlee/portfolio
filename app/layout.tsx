@@ -13,8 +13,8 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="en" className={inter.className}>
     <head />
-    <body>
-      <div className={styles.wrapper}>
+    <body className="bg-purple-primary">
+      <div className={`${styles.wrapper} mx-auto text-white`}>
         <GlobalHeader />
         {children}
       </div>
