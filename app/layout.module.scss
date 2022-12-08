@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--spacing-xl);
   @include xl {
     max-width: 75rem;
   }
