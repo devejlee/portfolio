@@ -13,3 +13,7 @@
     }
   }
 }
+
+.currentPathLink {
+  @include text-gradient;
+}
