@@ -1,17 +1,25 @@
 @import "@styles/mixins";
 
 .wrapper {
-  border: 1px solid red;
   h2 {
-    font-size: var(--font-size-700);
+    @include text-3xl;
     @include xl {
-      font-size: var(--font-size-900);
+      @include text-4xl;
     }
   }
   p {
-    font-size: var(----font-size-400);
+    @include text-base;
+    max-width: 40rem;
     @include xl {
-      font-size: var(--font-size-500);
+      @include text-xl;
+      max-width: 50rem;
     }
+  }
+}
+
+.socialLinks {
+  display: flex;
+  a {
+    margin-right: var(--spacing-sm);
   }
 }

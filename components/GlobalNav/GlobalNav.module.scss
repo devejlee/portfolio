@@ -1,18 +1,14 @@
 @import "@styles/mixins";
 
 .globalNav {
-  border: 1px solid red;
   ul {
     display: flex;
-    padding-left: 0;
-    list-style: none;
     a {
+      @include text-xs;
       display: block;
       margin-right: var(--spacing-md);
-      border: 1px solid red;
-      font-size: var(--font-size-300);
       @include xl {
-        font-size: var(--font-size-400);
+        @include text-base;
       }
     }
   }
