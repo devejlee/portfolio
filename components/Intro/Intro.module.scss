@@ -15,6 +15,9 @@
       max-width: 50rem;
     }
   }
+  span {
+    @include text-gradient;
+  }
 }
 
 .socialLinks {

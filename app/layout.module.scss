@@ -10,3 +10,8 @@
     max-width: 75rem;
   }
 }
+
+.gradient {
+  @include bg-gradient;
+  height: var(--spacing-sm);
+}
