@@ -25,6 +25,7 @@
       "@hooks/*": ["hooks/*"],
       "@typedef/*": ["typedef/*"],
       "@components/*": ["components/*"],
+      "@public/*": ["public/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
     },

@@ -3,6 +3,7 @@
 .globalNav {
   ul {
     display: flex;
+    flex-wrap: wrap;
     a {
       @include text-xs;
       display: block;

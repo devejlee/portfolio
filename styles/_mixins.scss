@@ -38,6 +38,7 @@
 @mixin text-xs {
   font-size: 0.75rem; /* 12px */
   line-height: 1rem; /* 16px */
+  font-weight: 500;
 }
 
 @mixin text-sm {
@@ -68,11 +69,13 @@
 @mixin text-3xl {
   font-size: 1.875rem; /* 30px */
   line-height: 2.25rem; /* 36px */
+  font-weight: 700;
 }
 
 @mixin text-4xl {
   font-size: 2.25rem; /* 36px */
   line-height: 2.5rem; /* 40px */
+  font-weight: 700;
 }
 
 // gradient

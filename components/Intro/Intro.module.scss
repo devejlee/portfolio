@@ -22,7 +22,14 @@
 
 .socialLinks {
   display: flex;
+  flex-wrap: wrap;
   a {
+    display: flex;
+    align-items: center;
     margin-right: var(--spacing-sm);
+    font-weight: 500;
+  }
+  img {
+    margin-right: var(--spacing-xs);
   }
 }

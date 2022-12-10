@@ -11,7 +11,7 @@
   }
 }
 
-.gradient {
+.gradientTop {
   @include bg-gradient;
   height: var(--spacing-sm);
 }
