@@ -23,10 +23,11 @@
 .socialLinks {
   display: flex;
   flex-wrap: wrap;
+  row-gap: var(--spacing-sm);
   a {
     display: flex;
     align-items: center;
-    margin-right: var(--spacing-sm);
+    margin-right: var(--spacing-md);
     font-weight: 500;
   }
   img {
