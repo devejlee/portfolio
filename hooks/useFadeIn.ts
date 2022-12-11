@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 
-export const useFadeIn = (delay = 0) => {
-  const elementRef = useRef<any>(null); // TODO: replace any with correct type
+export const useFadeIn = <T extends HTMLElement>(delay = 0) => {
+  const elementRef = useRef<T | null>(null);
 
   useEffect(() => {
     const ref = elementRef.current

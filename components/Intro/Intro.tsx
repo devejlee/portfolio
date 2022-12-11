@@ -8,10 +8,9 @@ import { useFadeIn } from "@hooks/useFadeIn"
 
 
 const Intro = () => {
-  const fadeInTitle = useFadeIn(100);
-  const fadeInIntro = useFadeIn(200);
-  const fadeInSocial = useFadeIn(300);
-  const test = useFadeIn();
+  const fadeInTitle = useFadeIn<HTMLHeadingElement>(100);
+  const fadeInIntro = useFadeIn<HTMLParagraphElement>(200);
+  const fadeInSocial = useFadeIn<HTMLUListElement>(300);
 
   return (
     <section className={styles.wrapper} >
