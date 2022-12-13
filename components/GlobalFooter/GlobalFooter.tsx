@@ -9,7 +9,7 @@ const GlobalFooter = () => {
     <footer className={styles.globalFooter}>
       <ul className={styles.siteLinks}>
         <li>
-          <a href="https://github.com/devejlee/portfolio" target="_blank" rel="noopener noreferrer">Source Code</a>
+          <a href="https://github.com/devejlee/portfolio" target="_blank" rel="noopener noreferrer" className="hover-underline-animation">Source Code</a>
         </li>
       </ul>
       <p>Contact Me</p>
