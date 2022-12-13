@@ -1,5 +1,6 @@
 import styles from "@app/layout.module.scss"
 import { GlobalHeader } from "@components/GlobalHeader/GlobalHeader";
+import { GlobalFooter } from "@components/GlobalFooter/GlobalFooter";
 import { Inter } from "@next/font/google";
 import "@styles/globals.scss"
 import { ReactNode } from "react";
@@ -17,7 +18,10 @@ const RootLayout = ({ children }: RootLayoutProps) => (
       <div className={styles.gradientTop}></div>
       <div className={styles.wrapper}>
         <GlobalHeader />
-        {children}
+        <main>
+          {children}
+        </main>
+        <GlobalFooter />
       </div>
     </body>
   </html>

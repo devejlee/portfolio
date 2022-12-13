@@ -1,0 +1,28 @@
+@import "@styles/mixins";
+
+.globalFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid var(--fuchsia-400);
+  @include text-xs;
+  @include xl {
+    @include text-base;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.siteLinks {
+  margin-top: 0;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 10rem;
+}
