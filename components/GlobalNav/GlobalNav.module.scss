@@ -11,6 +11,9 @@
       @include xl {
         @include text-base;
       }
+      &:hover {
+        @include text-gradient;
+      }
     }
   }
 }
