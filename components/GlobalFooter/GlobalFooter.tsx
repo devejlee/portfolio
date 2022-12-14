@@ -1,4 +1,5 @@
 import styles from "@components/GlobalFooter/GlobalFooter.module.scss"
+import { Tooltip } from "@components/Tooltip/Tooltip";
 import email from "@public/images/icons/email.svg"
 import github from "@public/images/icons/github.svg"
 import linkedIn from "@public/images/icons/linkedin.svg"
@@ -9,7 +10,9 @@ const GlobalFooter = () => {
     <footer className={styles.globalFooter}>
       <ul className={styles.siteLinks}>
         <li>
-          <a href="https://github.com/devejlee/portfolio" target="_blank" rel="noopener noreferrer" className="hover-underline-animation">Source Code</a>
+          <Tooltip text="View this website code">
+            <a href="https://github.com/devejlee/portfolio" target="_blank" rel="noopener noreferrer" className="hover-underline-animation">Source Code</a>
+          </Tooltip>
         </li>
       </ul>
       <p>Contact Me</p>

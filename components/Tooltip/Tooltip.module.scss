@@ -1,0 +1,21 @@
+@import "@styles/mixins";
+
+.tooltipWrapper {
+  position: relative;
+}
+
+.tooltipText {
+  position: absolute;
+  bottom: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 20rem;
+  padding: var(--spacing-xs);
+  background: var(--purple-900);
+  border: 1px solid var(--fuchsia-400);
+  border-radius: 5px;
+  @include xl {
+    bottom: var(--spacing-xl);
+  }
+}
