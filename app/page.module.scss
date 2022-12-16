@@ -1,22 +1,10 @@
 @import "@styles/mixins";
 
 .wrapper {
-  h2 {
-    @include text-3xl;
-    @include xl {
-      @include text-4xl;
-    }
-  }
   p {
-    @include text-base;
-    max-width: 40rem;
     @include xl {
-      @include text-xl;
       max-width: 50rem;
     }
-  }
-  span {
-    @include text-gradient;
   }
 }
 
