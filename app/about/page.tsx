@@ -1,5 +1,7 @@
 "use client"
+import styles from "@app/about/page.module.scss"
 import { useFadeIn } from "@hooks/useFadeIn"
+import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
 
 const AboutPage = () => {
   const fadeInTitle = useFadeIn<HTMLHeadingElement>(100);
@@ -16,6 +18,14 @@ const AboutPage = () => {
       </section>
       <section {...fadeInSkills} className="will-fade">
         <h3>Skills</h3>
+        <div className={styles.iconsWrapper}>
+          <SiReact className={styles.icon} />
+          <SiNextdotjs className={styles.icon} />
+          <SiRedux className={styles.icon} />
+          <SiTypescript className={styles.icon} />
+          <SiChakraui className={styles.icon} />
+          <SiCypress className={styles.icon} />
+        </div>
       </section>
     </>
   )

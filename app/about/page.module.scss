@@ -1,0 +1,20 @@
+@import "@styles/mixins";
+
+.iconsWrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 15rem;
+  width: 100%;
+  @include xl {
+    max-width: 20rem;
+  }
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  @include xl {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
