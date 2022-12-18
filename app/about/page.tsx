@@ -3,6 +3,7 @@ import styles from "@app/about/page.module.scss"
 import { Tooltip } from "@components/Tooltip/Tooltip";
 import { useFadeIn } from "@hooks/useFadeIn"
 import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
+import { TbBrandReactNative } from 'react-icons/tb';
 
 const AboutPage = () => {
   const fadeInTitle = useFadeIn<HTMLHeadingElement>(100);
@@ -25,6 +26,11 @@ const AboutPage = () => {
       id: 'Redux',
       icon: SiRedux,
       link: 'https://redux.js.org/'
+    },
+    {
+      id: 'React Query',
+      icon: TbBrandReactNative,
+      link: 'https://react-query-v3.tanstack.com/'
     },
     {
       id: 'Typescript',
