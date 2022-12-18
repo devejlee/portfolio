@@ -1,9 +1,7 @@
 import styles from "@components/GlobalFooter/GlobalFooter.module.scss"
 import { Tooltip } from "@components/Tooltip/Tooltip";
-import email from "@public/images/icons/email.svg"
-import github from "@public/images/icons/github.svg"
-import linkedIn from "@public/images/icons/linkedin.svg"
-import Image from 'next/image';
+import { AiOutlineMail } from 'react-icons/ai';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 const GlobalFooter = () => {
   return (
@@ -19,17 +17,17 @@ const GlobalFooter = () => {
       <ul className={styles.socialLinks}>
         <li>
           <a href="mailto:develijahlee@gmail.com" target="_blank" rel="noopener noreferrer">
-            <Image src={email} alt="LinkedIn" width={28} height={28} />
+            <AiOutlineMail className={styles.emailIcon} />
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/elijah-lee-9397a2188/" target="_blank" rel="noopener noreferrer">
-            <Image src={linkedIn} alt="LinkedIn" width={25} height={25} />
+            <SiLinkedin className={styles.icon} />
           </a>
         </li>
         <li>
           <a href="https://github.com/devejlee" target="_blank" rel="noopener noreferrer">
-            <Image src={github} alt="Github" width={25} height={25} />
+            <SiGithub className={styles.icon} />
           </a>
         </li>
       </ul>
