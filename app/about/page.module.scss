@@ -1,5 +1,9 @@
 @import "@styles/mixins";
 
+.skillsWrap {
+  padding-bottom: var(--spacing-md);
+}
+
 .iconsWrapper {
   display: flex;
   justify-content: space-between;
