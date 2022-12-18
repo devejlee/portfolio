@@ -4,7 +4,7 @@ import React, { ReactNode, useState } from "react";
 
 interface TooltipProps {
   text: string
-  direction: string
+  direction: 'top' | 'right' | 'bottom' | 'left'
   children: ReactNode
 }
 

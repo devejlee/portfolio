@@ -14,12 +14,24 @@
   background: var(--purple-900);
   border: 1px solid var(--fuchsia-400);
   border-radius: 5px;
+  &::before {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    border: solid transparent;
+    border-width: 0.5rem;
+    margin-left: calc(0.5rem * -1);
+  }
 }
 
 .tooltipText-top {
-  top: calc(var(--spacing-xl) * -1);
-  @include xl {
-    top: calc(var(--spacing-xxl) * -1);
+  top: calc(var(--spacing-xxl) * -1);
+  &::before {
+    top: 100%;
+    border-top-color: var(--fuchsia-400);
   }
 }
 
@@ -27,12 +39,20 @@
   left: calc(100% + var(--spacing-md));
   top: 50%;
   transform: translateX(0) translateY(-50%);
+  &::before {
+    transform: translateX(0) translateY(-50%);
+    left: calc(0.5rem * -1);
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    border-right-color: var(--fuchsia-400);
+  }
 }
 
 .tooltipText-bottom {
-  bottom: calc(var(--spacing-xl) * -1);
-  @include xl {
-    bottom: calc(var(--spacing-xxl) * -1);
+  bottom: calc(var(--spacing-xxl) * -1);
+  &::before {
+    bottom: 100%;
+    border-bottom-color: var(--fuchsia-400);
   }
 }
 
@@ -41,4 +61,11 @@
   right: calc(100% + var(--spacing-md));
   top: 50%;
   transform: translateX(0) translateY(-50%);
+  &::before {
+    left: auto;
+    right: calc(0.5rem * -2);
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    border-left-color: var(--fuchsia-400);
+  }
 }
