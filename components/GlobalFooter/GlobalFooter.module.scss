@@ -6,7 +6,7 @@
   justify-content: space-around;
   align-items: center;
   padding: var(--spacing-md) 0;
-  border-top: 1px solid var(--fuchsia-400);
+  border-top: 1px solid var(--bg-zinc-400);
   @include text-xs;
   @include xl {
     @include text-base;
