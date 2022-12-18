@@ -8,7 +8,7 @@ const GlobalFooter = () => {
     <footer className={styles.globalFooter}>
       <ul className={styles.siteLinks}>
         <li>
-          <Tooltip text="View this website code">
+          <Tooltip text="View this website code" direction="top">
             <a href="https://github.com/devejlee/portfolio" target="_blank" rel="noopener noreferrer" className="hover-underline-animation">Source Code</a>
           </Tooltip>
         </li>

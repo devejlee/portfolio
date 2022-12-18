@@ -4,10 +4,11 @@ import React, { ReactNode, useState } from "react";
 
 interface TooltipProps {
   text: string
+  direction: string
   children: ReactNode
 }
 
-const Tooltip = ({ text, children }: TooltipProps) => {
+const Tooltip = ({ text, direction, children }: TooltipProps) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleMouseEnter = () => setShowTooltip(true);
@@ -15,7 +16,7 @@ const Tooltip = ({ text, children }: TooltipProps) => {
 
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={styles.tooltipWrapper}>
-      {showTooltip && <div className={styles.tooltipText}>{text}</div>}
+      {showTooltip && <div className={`${styles.tooltipText} ${styles[`tooltipText-${direction}`]}`}>{text}</div>}
       {children}
     </div>
   );

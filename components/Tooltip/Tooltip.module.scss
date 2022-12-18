@@ -6,7 +6,6 @@
 
 .tooltipText {
   position: absolute;
-  bottom: var(--spacing-lg);
   left: 50%;
   transform: translateX(-50%);
   width: max-content;
@@ -15,7 +14,31 @@
   background: var(--purple-900);
   border: 1px solid var(--fuchsia-400);
   border-radius: 5px;
+}
+
+.tooltipText-top {
+  top: calc(var(--spacing-xl) * -1);
   @include xl {
-    bottom: var(--spacing-xl);
+    top: calc(var(--spacing-xxl) * -1);
   }
+}
+
+.tooltipText-right {
+  left: calc(100% + var(--spacing-md));
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+
+.tooltipText-bottom {
+  bottom: calc(var(--spacing-xl) * -1);
+  @include xl {
+    bottom: calc(var(--spacing-xxl) * -1);
+  }
+}
+
+.tooltipText-left {
+  left: auto;
+  right: calc(100% + var(--spacing-md));
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
 }
