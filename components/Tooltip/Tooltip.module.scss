@@ -10,7 +10,7 @@
   transform: translateX(-50%);
   width: max-content;
   max-width: 20rem;
-  padding: var(--spacing-xs);
+  padding: var(--spacing-sm);
   background: var(--bg-zinc-900);
   border-radius: 5px;
   z-index: 10;
@@ -28,7 +28,7 @@
 }
 
 .tooltipText-top {
-  top: calc(var(--spacing-xxl) * -1);
+  top: calc(var(--spacing-3xl) * -1);
   &::before {
     top: 100%;
     border-top-color: var(--bg-zinc-900);
@@ -49,7 +49,7 @@
 }
 
 .tooltipText-bottom {
-  bottom: calc(var(--spacing-xxl) * -1);
+  bottom: calc(var(--spacing-3xl) * -1);
   &::before {
     bottom: 100%;
     border-bottom-color: var(--bg-zinc-900);
