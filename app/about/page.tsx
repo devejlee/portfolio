@@ -1,5 +1,6 @@
 "use client"
 import styles from "@app/about/page.module.scss"
+import { Tooltip } from "@components/Tooltip/Tooltip";
 import { useFadeIn } from "@hooks/useFadeIn"
 import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
 
@@ -8,6 +9,39 @@ const AboutPage = () => {
   const fadeInIntro = useFadeIn<HTMLParagraphElement>(200);
   const fadeInExperience = useFadeIn<HTMLParagraphElement>(300);
   const fadeInSkills = useFadeIn<HTMLElement>(400);
+
+  const skills = [
+    {
+      id: 'React',
+      icon: SiReact,
+      link: 'https://reactjs.org/'
+    },
+    {
+      id: 'Nextjs',
+      icon: SiNextdotjs,
+      link: 'https://nextjs.org/'
+    },
+    {
+      id: 'Redux',
+      icon: SiRedux,
+      link: 'https://redux.js.org/'
+    },
+    {
+      id: 'Typescript',
+      icon: SiTypescript,
+      link: 'https://www.typescriptlang.org/'
+    },
+    {
+      id: 'ChakraUi',
+      icon: SiChakraui,
+      link: 'https://chakra-ui.com/'
+    },
+    {
+      id: 'Cypress',
+      icon: SiCypress,
+      link: 'https://www.cypress.io/'
+    }
+  ]
 
   return (
     <>
@@ -19,12 +53,13 @@ const AboutPage = () => {
       <section {...fadeInSkills} className="will-fade">
         <h3>Skills</h3>
         <div className={styles.iconsWrapper}>
-          <SiReact className={styles.icon} />
-          <SiNextdotjs className={styles.icon} />
-          <SiRedux className={styles.icon} />
-          <SiTypescript className={styles.icon} />
-          <SiChakraui className={styles.icon} />
-          <SiCypress className={styles.icon} />
+          {skills.map((skill) => (
+            <Tooltip key={skill.id} text={skill.id} direction="top">
+              <a href={skill.link} target="_blank" rel="noopener noreferrer">
+                <skill.icon className={styles.icon}></skill.icon>
+              </a>
+            </Tooltip>
+          ))}
         </div>
       </section>
     </>
