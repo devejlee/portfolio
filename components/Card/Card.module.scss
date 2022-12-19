@@ -1,0 +1,8 @@
+@import "@styles/mixins";
+
+.card {
+  padding: var(--spacing-lg);
+  background-color: var(--bg-zinc-700);
+  border: 1px solid var(--bg-zinc-400);
+  border-radius: 5px;
+}

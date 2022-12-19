@@ -22,6 +22,7 @@
     "paths": {
       "@api/*": ["api/*"],
       "@app/*": ["app/*"],
+      "@data/*": ["data/*"],
       "@hooks/*": ["hooks/*"],
       "@typedef/*": ["typedef/*"],
       "@components/*": ["components/*"],
