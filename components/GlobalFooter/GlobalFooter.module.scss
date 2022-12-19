@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-lg) 0;
   border-top: 1px solid var(--bg-zinc-400);
   @include text-xs;
   @include xl {
@@ -29,6 +29,7 @@
   justify-content: space-evenly;
   width: 100%;
   max-width: 10rem;
+  margin: var(--spacing-md) 0;
 }
 
 .emailIcon {

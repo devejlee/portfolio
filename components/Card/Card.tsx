@@ -12,7 +12,7 @@ const Card = ({ year, title, body, demoUrl, githubUrl }: CardProps) => {
   return (
     <div className={styles.card}>
       <div>
-        <time>{year}</time>
+        <time className="text-gradient">{year}</time>
         <h3>{title}</h3>
         <p>{body}</p>
       </div>

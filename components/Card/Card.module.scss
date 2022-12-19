@@ -5,4 +5,7 @@
   background-color: var(--bg-zinc-700);
   border: 1px solid var(--bg-zinc-400);
   border-radius: 5px;
+  h3 {
+    margin: var(--spacing-md) 0;
+  }
 }
