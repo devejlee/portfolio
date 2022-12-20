@@ -7,5 +7,28 @@
   border-radius: 5px;
   h3 {
     margin: var(--spacing-md) 0;
+    @include text-lg;
+    @include xl {
+      @include text-xl;
+    }
+  }
+  p, a {
+    @include text-base;
+    @include xl {
+      @include text-lg;
+    }
+  }
+}
+
+.cardLinks {
+  a {
+    margin-right: var(--spacing-sm);
+    padding: 0.5rem 0.6rem;
+    background-color: var(--bg-zinc-600);
+    border-radius: 24px;
+    @include text-xs;
+    @include xl {
+      @include text-sm;
+    }
   }
 }

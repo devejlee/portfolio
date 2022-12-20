@@ -16,7 +16,7 @@ const Card = ({ year, title, body, demoUrl, githubUrl }: CardProps) => {
         <h3>{title}</h3>
         <p>{body}</p>
       </div>
-      <div>
+      <div className={styles.cardLinks}>
         <a href={demoUrl} target="_blank" rel="noopener noreferrer">Demo</a>
         <a href={githubUrl} target="_blank" rel="noopener noreferrer">Github</a>
       </div>
