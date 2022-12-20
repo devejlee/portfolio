@@ -21,7 +21,10 @@
 }
 
 .cardLinks {
+  display: flex;
   a {
+    display: flex;
+    align-items: center;
     margin-right: var(--spacing-sm);
     padding: 0.5rem 0.6rem;
     background-color: var(--bg-zinc-600);
@@ -29,6 +32,9 @@
     @include text-xs;
     @include xl {
       @include text-sm;
+    }
+    span {
+      margin-right: var(--spacing-xs);
     }
   }
 }

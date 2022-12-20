@@ -1,4 +1,5 @@
 import styles from "@components/Card/Card.module.scss"
+import { HiExternalLink } from "react-icons/hi";
 
 interface CardProps {
   year: string
@@ -17,8 +18,14 @@ const Card = ({ year, title, body, demoUrl, githubUrl }: CardProps) => {
         <p>{body}</p>
       </div>
       <div className={styles.cardLinks}>
-        <a href={demoUrl} target="_blank" rel="noopener noreferrer">Demo</a>
-        <a href={githubUrl} target="_blank" rel="noopener noreferrer">Github</a>
+        <a href={demoUrl} target="_blank" rel="noopener noreferrer">
+          <span>Demo</span>
+          <HiExternalLink />
+        </a>
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+          <span>Github</span>
+          <HiExternalLink />
+        </a>
       </div>
     </div>
   );
