@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const BlogPage = () => {
-  // get list of all files from our posts directory
+  // get list of all files from posts directory
   const files = fs.readdirSync('posts');
 
   // get frontmatter & slug from each post

@@ -3,26 +3,17 @@ import matter from 'gray-matter';
 import md from 'markdown-it';
 
 export const generateStaticParams = async () => {
-  // get list of all files from our posts directory
+  // get list of all files from posts directory
   const files = fs.readdirSync('posts');
 
-  // generate a path for each one
-  const paths = files.map((fileName) => ({
+  // get slug from each post
+  const posts = files.map((fileName) => ({
     slug: fileName.replace('.md', ''),
   }));
 
-  return paths.map((path) => ({
-    slug: path.slug,
+  return posts.map((post) => ({
+    slug: post.slug,
   }));
-};
-
-const fetchData = async (params: { slug: string }) => {
-  const fileName = fs.readFileSync(`posts/${params.slug}.md`, 'utf-8');
-  const { data: frontmatter, content } = matter(fileName);
-  return {
-    frontmatter,
-    content,
-  };
 };
 
 interface PageProps {
@@ -30,13 +21,23 @@ interface PageProps {
 }
 
 const Page = async ({ params }: PageProps) => {
-  const data = await fetchData(params);
+  const fetchPostData = async (params: { slug: string }) => {
+    const fileName = fs.readFileSync(`posts/${params.slug}.md`, 'utf-8');
+    const { data: frontmatter, content } = matter(fileName);
+    return {
+      frontmatter,
+      content,
+    };
+  };
+
+  const data = await fetchPostData(params);
   const { frontmatter } = data;
+  const { title, author } = frontmatter;
 
   return (
     <div>
-      <div>{frontmatter.title}</div>
-      <div>{frontmatter.author}</div>
+      <div>{title}</div>
+      <div>{author}</div>
       <div dangerouslySetInnerHTML={{ __html: md().render(data.content) }} />
     </div>
   );
