@@ -1,4 +1,4 @@
-import { DefaultHeadTags } from "@components/DefaultHeadTags/DefaultHeadTags";
+import { DefaultHeadTags } from '@components/DefaultHeadTags/DefaultHeadTags';
 
 const ProjectsHead = () => (
   <>
@@ -6,6 +6,6 @@ const ProjectsHead = () => (
     <meta name="description" content="Projects of Frontend Developer Elijah Lee" />
     <DefaultHeadTags />
   </>
-)
+);
 
-export default ProjectsHead
+export default ProjectsHead;

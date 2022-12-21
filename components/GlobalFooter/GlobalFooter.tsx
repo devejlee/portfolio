@@ -1,5 +1,5 @@
-import styles from "@components/GlobalFooter/GlobalFooter.module.scss"
-import { Tooltip } from "@components/Tooltip/Tooltip";
+import styles from '@components/GlobalFooter/GlobalFooter.module.scss';
+import { Tooltip } from '@components/Tooltip/Tooltip';
 import { AiOutlineMail } from 'react-icons/ai';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
@@ -36,4 +36,4 @@ const GlobalFooter = () => {
   );
 };
 
-export { GlobalFooter }
+export { GlobalFooter };

@@ -1,7 +1,7 @@
-"use client"
-import styles from "@app/about/page.module.scss"
-import { Tooltip } from "@components/Tooltip/Tooltip";
-import { useFadeIn } from "@hooks/useFadeIn"
+'use client';
+import styles from '@app/about/page.module.scss';
+import { Tooltip } from '@components/Tooltip/Tooltip';
+import { useFadeIn } from '@hooks/useFadeIn';
 import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
 
@@ -47,7 +47,7 @@ const AboutPage = () => {
       icon: SiCypress,
       link: 'https://www.cypress.io/'
     }
-  ]
+  ];
 
   return (
     <div className={styles.wrapper}>
@@ -69,7 +69,7 @@ const AboutPage = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

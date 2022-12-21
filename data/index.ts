@@ -6,4 +6,4 @@ export const projects = [
     demoUrl: 'https://pokedex-one-murex.vercel.app/',
     githubUrl: 'https://github.com/devejlee/pokedex'
   },
-]
+];

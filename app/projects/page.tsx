@@ -1,8 +1,8 @@
-"use client"
-import styles from "@app/projects/page.module.scss"
-import { Card } from "@components/Card/Card";
-import { projects } from "@data/index";
-import { useFadeIn } from "@hooks/useFadeIn"
+'use client';
+import styles from '@app/projects/page.module.scss';
+import { Card } from '@components/Card/Card';
+import { projects } from '@data/index';
+import { useFadeIn } from '@hooks/useFadeIn';
 
 const ProjectsPage = () => {
   const fadeInTitle = useFadeIn<HTMLHeadingElement>(100);
@@ -18,12 +18,12 @@ const ProjectsPage = () => {
           {projects.map((project) => {
             return (
               <Card key={project.title} year={project.year} title={project.title} body={project.body} demoUrl={project.demoUrl} githubUrl={project.githubUrl} />
-            )
+            );
           })}
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default ProjectsPage
+export default ProjectsPage;

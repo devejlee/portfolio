@@ -1,5 +1,5 @@
-import styles from "@components/Card/Card.module.scss"
-import { HiExternalLink } from "react-icons/hi";
+import styles from '@components/Card/Card.module.scss';
+import { HiExternalLink } from 'react-icons/hi';
 
 interface CardProps {
   year: string
@@ -29,6 +29,6 @@ const Card = ({ year, title, body, demoUrl, githubUrl }: CardProps) => {
       </div>
     </div>
   );
-}
+};
 
-export { Card }
+export { Card };

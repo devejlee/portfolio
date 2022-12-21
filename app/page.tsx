@@ -1,7 +1,7 @@
-"use client"
-import styles from "@app/page.module.scss"
-import { useFadeIn } from "@hooks/useFadeIn"
-import { IoDocument } from 'react-icons/io5'
+'use client';
+import styles from '@app/page.module.scss';
+import { useFadeIn } from '@hooks/useFadeIn';
+import { IoDocument } from 'react-icons/io5';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 const Page = () => {
@@ -38,7 +38,7 @@ const Page = () => {
         <p {...fadeInTest} className="will-fade">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda minus neque vitae voluptatibus et architecto unde optio expedita dolores ratione, nisi molestias quia veritatis excepturi tenetur fugiat nam harum quod! Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima libero iure ab laboriosam suscipit! A sit exercitationem dolorum nisi, maxime modi? Distinctio, perspiciatis animi! Possimus corrupti ullam accusamus laborum libero.</p>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

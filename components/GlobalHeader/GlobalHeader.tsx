@@ -1,5 +1,5 @@
-import styles from "@components/GlobalHeader/GlobalHeader.module.scss"
-import { GlobalNav } from "@components/GlobalNav/GlobalNav";
+import styles from '@components/GlobalHeader/GlobalHeader.module.scss';
+import { GlobalNav } from '@components/GlobalNav/GlobalNav';
 
 const GlobalHeader = () => {
   return (
@@ -9,4 +9,4 @@ const GlobalHeader = () => {
   );
 };
 
-export { GlobalHeader }
+export { GlobalHeader };

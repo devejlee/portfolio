@@ -1,6 +1,6 @@
 'use client';
-import styles from "@components/GlobalNav/GlobalNav.module.scss"
-import Link from "next/link";
+import styles from '@components/GlobalNav/GlobalNav.module.scss';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const GlobalNav = () => {
@@ -8,9 +8,9 @@ const GlobalNav = () => {
 
   const isCurrentPath = (path: string) => {
     if (path === pathname) {
-      return styles.currentPathLink
+      return styles.currentPathLink;
     }
-  }
+  };
 
   return (
     <nav className={styles.globalNav}>
@@ -40,4 +40,4 @@ const GlobalNav = () => {
   );
 };
 
-export { GlobalNav }
+export { GlobalNav };

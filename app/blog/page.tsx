@@ -1,12 +1,12 @@
-import styles from "@app/blog/page.module.scss"
-import fs from "fs";
+import styles from '@app/blog/page.module.scss';
+import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
 
 const BlogPage = () => {
   // get list of all files from our posts directory
-  const files = fs.readdirSync("posts");
+  const files = fs.readdirSync('posts');
 
   // get frontmatter & slug from each post
   const posts = files.map((fileName) => {
@@ -25,8 +25,8 @@ const BlogPage = () => {
       <div>This is a blog page</div>
       <div>
         {posts.map((post) => {
-          const { slug, frontmatter } = post
-          const { title, category, date, bannerImage } = frontmatter
+          const { slug, frontmatter } = post;
+          const { title, category, date, bannerImage } = frontmatter;
 
           return (
             <Link key={slug} href={`/blog/${slug}`} className={styles.post}>
@@ -36,11 +36,11 @@ const BlogPage = () => {
               <div>{category}</div>
               <Image src={bannerImage} width={350} height={175} alt="post image" />
             </Link>
-          )
+          );
         })}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default BlogPage
+export default BlogPage;

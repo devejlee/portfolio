@@ -1,6 +1,6 @@
 'use client';
-import styles from "@components/Tooltip/Tooltip.module.scss"
-import React, { ReactNode, useState } from "react";
+import styles from '@components/Tooltip/Tooltip.module.scss';
+import React, { ReactNode, useState } from 'react';
 
 interface TooltipProps {
   text: string
@@ -20,6 +20,6 @@ const Tooltip = ({ text, direction, children }: TooltipProps) => {
       {children}
     </div>
   );
-}
+};
 
-export { Tooltip }
+export { Tooltip };
