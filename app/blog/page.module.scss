@@ -1,0 +1,7 @@
+@import "@styles/mixins";
+
+.post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
