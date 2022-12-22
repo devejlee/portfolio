@@ -1,7 +1,7 @@
-import styles from '@components/Card/Card.module.scss';
+import styles from '@components/ProjectCard/ProjectCard.module.scss';
 import { HiExternalLink } from 'react-icons/hi';
 
-interface CardProps {
+interface ProjectCardProps {
   year: string
   title: string
   body: string
@@ -9,7 +9,7 @@ interface CardProps {
   githubUrl: string
 }
 
-const Card = ({ year, title, body, demoUrl, githubUrl }: CardProps) => {
+const ProjectCard = ({ year, title, body, demoUrl, githubUrl }: ProjectCardProps) => {
   return (
     <div className={styles.card}>
       <div>
@@ -31,4 +31,4 @@ const Card = ({ year, title, body, demoUrl, githubUrl }: CardProps) => {
   );
 };
 
-export { Card };
+export { ProjectCard };

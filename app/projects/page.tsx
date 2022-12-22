@@ -1,6 +1,6 @@
 'use client';
 import styles from '@app/projects/page.module.scss';
-import { Card } from '@components/Card/Card';
+import { ProjectCard } from '@components/ProjectCard/ProjectCard';
 import { projects } from '@data/index';
 import { useFadeIn } from '@hooks/useFadeIn';
 
@@ -16,7 +16,7 @@ const ProjectsPage = () => {
       <div {...fadeInProjects} className={`${styles.cardsWrapper} will-fade`}>
         {projects.map((project) => {
           return (
-            <Card key={project.title} year={project.year} title={project.title} body={project.body} demoUrl={project.demoUrl} githubUrl={project.githubUrl} />
+            <ProjectCard key={project.title} year={project.year} title={project.title} body={project.body} demoUrl={project.demoUrl} githubUrl={project.githubUrl} />
           );
         })}
       </div>
