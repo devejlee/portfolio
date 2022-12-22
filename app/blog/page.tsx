@@ -21,9 +21,9 @@ const BlogPage = () => {
   });
 
   return (
-    <>
+    <section>
       <div>This is a blog page</div>
-      <div>
+      <div className={styles.postsWrapper}>
         {posts.map((post) => {
           const { slug, frontmatter } = post;
           const { title, category, date, bannerImage } = frontmatter;
@@ -39,7 +39,7 @@ const BlogPage = () => {
           );
         })}
       </div>
-    </>
+    </section>
   );
 };
 

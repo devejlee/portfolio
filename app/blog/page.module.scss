@@ -1,5 +1,17 @@
 @import "@styles/mixins";
 
+.postsWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--spacing-lg);
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .post {
   display: flex;
   flex-direction: column;
