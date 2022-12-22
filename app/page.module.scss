@@ -1,7 +1,6 @@
 @import "@styles/mixins";
 
 .wrapper {
-  padding: var(--spacing-lg) 0;
   p {
     @include xl {
       max-width: 50rem;

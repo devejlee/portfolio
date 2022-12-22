@@ -10,7 +10,7 @@ const ProjectsPage = () => {
   const fadeInProjects = useFadeIn<HTMLDivElement>(300);
 
   return (
-    <section className={styles.wrapper}>
+    <section>
       <h2 {...fadeInTitle} className="will-fade"><span className="text-gradient">Projects</span></h2>
       <p {...fadeInIntro} className="will-fade">Things I made for fun</p>
       <div {...fadeInProjects} className={`${styles.cardsWrapper} will-fade`}>

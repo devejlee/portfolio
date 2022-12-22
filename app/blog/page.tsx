@@ -22,7 +22,8 @@ const BlogPage = () => {
 
   return (
     <section>
-      <div>This is a blog page</div>
+      <h2><span className="text-gradient">Blog</span></h2>
+      <p>Writings on development</p>
       <div className={styles.postsWrapper}>
         {posts.map((post) => {
           const { slug, frontmatter } = post;

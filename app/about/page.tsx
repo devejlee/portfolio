@@ -50,7 +50,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className={styles.wrapper}>
+    <div>
       <section>
         <h2 {...fadeInTitle} className="will-fade">About <span className="text-gradient">Elijah Lee</span></h2>
         <p {...fadeInIntro} className="will-fade">Hey, I&apos;m Elijah! I started making websites with WordPress as a freshman college student in 2015 as a hobby. That passion persisted for years as I dived into the vast and ever-expanding world of frontend development. I love how coding gives me the freedom to convert my ideas into reality, so long as I put in the time and effort.</p>

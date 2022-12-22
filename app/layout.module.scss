@@ -1,6 +1,6 @@
 @import "@styles/mixins";
 
-.wrapper {
+.globalWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,6 +9,10 @@
   @include xl {
     max-width: 75rem;
   }
+}
+
+.childrenWrapper {
+  padding: var(--spacing-lg) 0;
 }
 
 .gradientTop {
