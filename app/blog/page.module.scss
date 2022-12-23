@@ -4,16 +4,10 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: var(--spacing-lg);
-  @include md {
+  @include sm {
     grid-template-columns: repeat(2, 1fr);
   }
-  @include xl {
+  @include md {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-.post {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid red;
 }

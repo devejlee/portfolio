@@ -1,8 +1,8 @@
 import styles from '@app/blog/page.module.scss';
+import { BlogCard } from '@components/BlogCard/BlogCard';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const BlogPage = () => {
   // get list of all files from posts directory
@@ -27,15 +27,11 @@ const BlogPage = () => {
       <div className={styles.postsWrapper}>
         {posts.map((post) => {
           const { slug, frontmatter } = post;
-          const { title, category, date, bannerImage } = frontmatter;
+          const { bannerImage, title, date } = frontmatter;
 
           return (
-            <Link key={slug} href={`/blog/${slug}`} className={styles.post}>
-              <div>{slug}</div>
-              <div>{title}</div>
-              <div>{date}</div>
-              <div>{category}</div>
-              <Image src={bannerImage} width={350} height={175} alt="post image" />
+            <Link key={slug} href={`/blog/${slug}`}>
+              <BlogCard bannerImage={bannerImage} title={title} date={date} />
             </Link>
           );
         })}

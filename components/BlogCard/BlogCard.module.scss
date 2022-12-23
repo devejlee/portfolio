@@ -1,0 +1,29 @@
+@import "@styles/mixins";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-zinc-700);
+  border: 1px solid var(--bg-zinc-400);
+  border-radius: 5px;
+}
+
+.cardBody {
+  padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+  h3 {
+    margin: var(--spacing-md) 0;
+    @include text-lg;
+    @include xl {
+      @include text-xl;
+    }
+  }
+}
+
+.bannerImageWrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  img {
+    border-radius: 5px;
+    object-fit: cover;
+  }
+}
