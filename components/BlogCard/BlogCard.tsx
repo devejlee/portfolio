@@ -1,15 +1,17 @@
 import styles from '@components/BlogCard/BlogCard.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface BlogCardProps {
+  slug: string
   bannerImage: string
   title: string
   date: string
 }
 
-const BlogCard = ({ bannerImage, title, date }: BlogCardProps) => {
+const BlogCard = ({ slug, bannerImage, title, date }: BlogCardProps) => {
   return (
-    <div className={styles.card}>
+    <Link href={`/blog/${slug}`} className={styles.card}>
       <div className={styles.bannerImageWrapper}>
         <Image src={bannerImage} alt="post image" fill />
       </div>
@@ -17,7 +19,7 @@ const BlogCard = ({ bannerImage, title, date }: BlogCardProps) => {
         <h3>{title}</h3>
         <time className="text-gradient">{date}</time>
       </div>
-    </div>
+    </Link>
   );
 };
 

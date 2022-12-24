@@ -2,7 +2,6 @@ import styles from '@components/BlogPosts/BlogPosts.module.scss';
 import { BlogCard } from '@components/BlogCard/BlogCard';
 import fs from 'fs';
 import matter from 'gray-matter';
-import Link from 'next/link';
 
 const BlogPosts = () => {
   // get list of all files from posts directory
@@ -27,9 +26,7 @@ const BlogPosts = () => {
         const { bannerImage, title, date } = frontmatter;
 
         return (
-          <Link key={slug} href={`/blog/${slug}`}>
-            <BlogCard bannerImage={bannerImage} title={title} date={date} />
-          </Link>
+          <BlogCard key={slug} slug={slug} bannerImage={bannerImage} title={title} date={date} />
         );
       })}
     </div>

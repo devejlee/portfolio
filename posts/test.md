@@ -1,11 +1,12 @@
 ---
-title: "This is an example post 1"
-author: "Alex Merced"
-category: "example"
-date: "2022-03-13"
+title: "How to Create a Markdown Blog with Nextjs 13"
+author: "Elijah Lee"
+category: "tutorial"
+date: "December 24, 2022"
 bannerImage: "/images/posts/example-post/nextjs.png"
 tags:
-    - example
+    - nextjs
+    - react
 ---
 
 ## This is an example blog post??
