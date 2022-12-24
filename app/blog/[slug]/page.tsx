@@ -32,12 +32,12 @@ const Page = async ({ params }: PageProps) => {
 
   const data = await fetchPostData(params);
   const { frontmatter } = data;
-  const { title, author } = frontmatter;
+  const { title, date } = frontmatter;
 
   return (
     <div>
-      <div>{title}</div>
-      <div>{author}</div>
+      <h3>{title}</h3>
+      <p>{date}</p>
       <div dangerouslySetInnerHTML={{ __html: md().render(data.content) }} />
     </div>
   );

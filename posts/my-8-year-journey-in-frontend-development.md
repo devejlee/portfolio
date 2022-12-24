@@ -1,12 +1,10 @@
 ---
-title: "How to Create a Markdown Blog with Nextjs 13"
+title: "My 8-Year-Journey in Frontend Development (2015-2022)"
 author: "Elijah Lee"
-category: "tutorial"
 date: "December 24, 2022"
-bannerImage: "/images/posts/example-post/nextjs.png"
+bannerImage: "/images/posts/example-post/mountain-road.jpg"
 tags:
-    - nextjs
-    - react
+    - personal
 ---
 
 ## This is an example blog post??
