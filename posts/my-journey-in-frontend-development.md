@@ -40,7 +40,7 @@ Now that I felt very comforatble with vanilla HTML, CSS, and JavaScript, I knew 
 
 My military service was finishing in the first year of January of 2020. I would return to college as a senior and was excited to return to school. There's no way something like a global pandemic could stop me from enjoying my last year in college, right?
 
-## 2020-2021
+## 2020
 ### Gatsby and Job Applications
 
 Good news: I was out of the military. Bad news: The coronavirus was disrupting the lives of billions of people all over the world. All classes were online, which gave me more time to focus on my next big project: remaking the WordPress website I made for my college newmagazine club with Gatsby and React. I realized that hosting the WordPress site was costing the club $200 every 6 months, and thought it was both my responsibility to bring that cost to $0 and thought it was an excellent opportunity to learn Gatsby and the wonders of static site generators.
@@ -56,9 +56,37 @@ I was ecstatic that I had an offer on the table. And as luck would have it, a CT
 I had not even graduated yet but I already had a job secured. All those years of work and planning had finally paid off, and I was ready to take the next step. 
 
 ## 2021-2022
-### Packaging, Distribution, and My First Job
+### Nextjs and My First Job
 
-I quickly realized working 8 hours a day in a professional setting was much different from working on personal projects in college.
+Working 8 hours a day in a professional setting was much different from working on personal projects in college. Up to this point I had only written React with class components in plain JavaScript and was now writing them with functional components with TypeScript. I became more familiar with various scenarios using react hooks and starting learning my way around Nextjs that was used for all our frontend products.
+
+My first big project was making a website introducing our company. I was the only developer assigned to the project and it was my first time working in a team with a designer and marketer. I had to get familiar with Google Tag Manager and learn some basics about Google Analytics to ensure the marketing team had access to the data they wanted. I also had to be flexible to design and marketing changes and improve my skills as a developer to ensure those visions became a reality. When I wasn't sure if a design or marketing requirment could be translated into code, I made small mockups on codesandbox and shared my results with my team to show what could or couldn't work.
+
+I also saw a lot of people leave and enter the company in a short span of time. For the first four months in my job, someone was leaving every month. My CTO, who had hired me, left the company only after 6 months I started working. I remember feeling quite sad when another junior frontend developer who had started work the same day as me left only after 8 months for another company. Before she left, she had told me that if our lead developers continued to code only in the way they were familiar with, they would not improve much either. I would only realize the meaning of her parting words a year later.
+
+Our company grew and we moved out of working in a wework to a bigger office near Gangnam. I also moved out of my home in Incheon and lived alone in a one-room apartment in Seoul to make commuting to work easier. My last major project was remaking another website promoting our packaging and distribution services. I was the sole developer participating in the project and during mid-development, I got the coronavirus and had to work from home. The company decided to renew the website again a year after I left, but I still have a copy of the [figma design](https://www.figma.com/file/OeSEydORz5x7Y8rEq1cPNf/%ED%92%88%EA%B3%A0-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A6%AC%EB%89%B4%EC%96%BC-(Copy)) of what I had worked on.
+
+After finishing the website, I moved teams to work on our packaging and distribution web app. We were trying to modernize our design at the time, and I found that the pre-existing code written with a component UI library was very incompatible with the new design that required more complex UX interactions. We were also using a premium library that we had to pay several thousands of dollars per year to organize our table columns and rows. Our Cypress end-to-end tests were incredibly slow with rows of `cy.wait` and I began to realize that the leadership believed in the "if it ain't broke, don't fix it" mentality, which I found quite frustating.
+
+Quitting my first job wasn't an easy decision, but I truly believe that I wouldn't have learned much the longer I had stayed there. If anything, I would have continued to use bad coding practices like writing a `useEffect` in every file that interacted with an api instead of using a common hook that could be reused across all those files.
+
+In the end, I was grateful for the opportunity to work as a junior frontend developer in my first job, but I outgrew the company and decided to move jobs to another company that was more focused on improving existing problems than ignoring them until something broke.
 
 ## 2022-2023
 ### NFTs, Web3, and My Second Job
+
+I was fortunate enough to get my second job a month after quitting my first one. I had initally accepted the offer thinking that I would be working mainly on the frontend side of integrating audio and machine learning in our services. I didn't think that I would be working on NFTs and web3 because those words were nowhere in the job description. So after an inital project of redesigning the company website with Nextjs and Tailwind, I was again the sole developer of another small team where we were tasked to create a staking web-app for our NFTs.
+
+I had to familiarize myself with a codebase that already had some web3 integration to animate the mouth shapes of NFTs with audio to make it look like they were talking in real-time with text-to-speech. Besides that, I also had to learn the basics of Mobx, Metamask, WalletConnect, and general web3 concepts. And we were given 2 weeks for development.
+
+After many late nights, working on weekends, and testing over the Ethereum network, we were ready to launch. Our original plan was to make the web-app desktop only, but the perfectionist in me decided to make a mobile design on a whim. It wasn't anything pretty, but I made sure the staking web-app was at least functional on a mobile device. 
+
+We launched and began to monitor problems on both the front and backend sides as thousands of NFTs began to be staked at once. We were using Datadog to monitor real-time bugs, and I found out that roughly 40% of users were on their mobile device! I like to believe my decision to make our web-app mobile friendly saved me at least one late night adding media queries to satisfy user complaints on why the website doesn't work on their phones.
+
+![staking](/images/posts/example-post/staking.gif)
+
+After finishing my first web3 project, I was assgined to another web3 project for creating custom NFTs via user recorded audio. We were given a month before launch. Our team comprised of 4 frontend developers, and I volunteered to take care of the authentication because I was confident I could do it since I had some previous web3 experience compared to the other developers who had none. I thought I could finish authentication in a week. It actually took three, even with all the overtime and weekends I worked. Looking back, if we had used a library like [wagmi](https://wagmi.sh/react/getting-started), I the development speed would have been much faster instead of doing everything by hand with Redux and React Context. But our team was still new to web3 and with the help of Chakra UI and React Query, we launched our custom voice NFT creation service a few days after the deadline.
+
+![staking](/images/posts/example-post/custom-voice.gif)
+
+After working on some additional feaures, I was finally assigned work on integrating audio on our alpha web app service.
