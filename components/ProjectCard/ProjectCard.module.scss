@@ -2,7 +2,7 @@
 
 .card {
   padding: var(--spacing-lg);
-  background-color: var(--bg-zinc-700);
+  background: var(--bg-zinc-700);
   border: 1px solid var(--bg-zinc-400);
   border-radius: 5px;
   h3 {
@@ -27,7 +27,7 @@
     align-items: center;
     margin-right: var(--spacing-sm);
     padding: 0.5rem 0.6rem;
-    background-color: var(--bg-zinc-600);
+    background: var(--bg-zinc-600);
     border-radius: 24px;
     @include text-xs;
     @include xl {
