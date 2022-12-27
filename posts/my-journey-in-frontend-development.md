@@ -101,7 +101,7 @@ Turns out I was still very sick because the night after I left the hospital, my 
 
 ![hospital food](/images/posts/example-post/hospital-food.jpeg)
 
-Shortly after leaving the hospital, I signed my resignation papers and recuperated at home. Ater eating small portions of bananas, boiled potatoes, rice, and lactose-free bread, I was feeling better and gained most of my lost weight.
+Shortly after leaving the hospital, I signed my resignation papers and recuperated at home. Ater eating small portions of bananas, boiled potatoes, rice, and lactose-free bread, I was feeling better and regained most of my lost weight.
  
 After much reflection, I realized that I needed to give myself ample time to rest before searching for my next job. My second job also made me realize what I needed to work on to become a better fronted developer. I wanted to learn more about authentication, cookies, CI/CD, and deeply consider the interfaces of my components to make them reusable for other developers. 
 
