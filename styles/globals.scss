@@ -29,6 +29,10 @@ body {
 body {
   background: var(--bg-zinc-800);
   color: var(--bg-zinc-100);
+  @include text-base;
+  @include xl {
+    @include text-xl;
+  }
 }
 
 a {
@@ -57,13 +61,6 @@ h3 {
   @include text-2xl;
   @include xl {
     @include text-3xl;
-  }
-}
-
-p {
-  @include text-base;
-  @include xl {
-    @include text-xl;
   }
 }
 
