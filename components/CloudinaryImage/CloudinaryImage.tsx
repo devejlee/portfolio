@@ -1,14 +1,12 @@
-import Image from 'next/image';
 import { buildUrl } from 'cloudinary-build-url';
+import Image from 'next/image';
 import { ImageProps } from 'next/image';
 
-type CloudinaryImageProps = Omit<ImageProps, 'src'>
-
-type ExtendedCloudinaryImageProps = Exclude<CloudinaryImageProps, 'id'> & {
+type CloudinaryImageProps = Omit<ImageProps, 'src'> & {
   id: string;
 }
 
-const CloudinaryImage = ({ id, alt, width, height, fill, loader, quality, priority, loading, placeholder, blurDataURL, unoptimized, onLoadingComplete }: ExtendedCloudinaryImageProps) => {
+const CloudinaryImage = ({ id, alt, width, height, fill, loader, quality, priority, loading, placeholder, blurDataURL, unoptimized, onLoadingComplete }: CloudinaryImageProps) => {
   const url = buildUrl(id, {
     cloud: {
       cloudName: 'drcrnibbz',
