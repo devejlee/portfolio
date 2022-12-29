@@ -1,6 +1,6 @@
 import styles from '@components/BlogCard/BlogCard.module.scss';
-import Link from 'next/link';
 import { CloudinaryImage } from '@components/CloudinaryImage/CloudinaryImage';
+import Link from 'next/link';
 
 interface BlogCardProps {
   slug: string

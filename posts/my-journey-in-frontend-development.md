@@ -2,7 +2,7 @@
 title: "My Journey in Frontend Development (2015-2022)"
 author: "Elijah Lee"
 date: "December 24, 2022"
-bannerImage: "cld-sample-5"
+bannerImage: "mountain-road"
 alt: "mountain road"
 tags:
     - personal
@@ -84,15 +84,15 @@ It was also my first time working closely with a junior backend developer. We qu
 
 We launched and began to monitor problems on both the front and backend sides as thousands of NFTs began to be staked at once. We were using Datadog to monitor real-time bugs, and I saw that roughly 40% of users were on their mobile device! I like to believe my decision to make our web-app mobile friendly saved me at least a few late nights adding media queries to satisfy user complaints on why the website didn't work on their phones.
 
-![staking](/images/posts/example-post/staking.gif)
+![Voiceverse staking](https://res.cloudinary.com/drcrnibbz/image/upload/v1672295525/voiceverse-staking.gif)
 
 After finishing my first web3 project, I was assigned to another web3 project for creating custom NFTs via user recorded audio. We were given a month before launch. Our team comprised of 4 frontend developers, and I volunteered to take care of the authentication because I was confident I could do it since I had some previous web3 experience compared to the other developers who had none. I thought I could finish authentication in a week. It actually took three, even with all the overtime and weekends I worked. Looking back, if we had used a library like [wagmi](https://wagmi.sh/react/getting-started), developing authentication could have been much faster instead of manually handling all the providers, accounts, connections, disconnections, signatures, nonces, loading, and error states with Redux and React Context. But our team was still new to web3 and we were unaware of such libraries at the time. And although using React Query to handle server states and Chakra UI to create component UIs did speed up development, we worked past 12:30 AM to launch our custom voice NFT creation service a few days after the first deadline.
 
-![custom voice](/images/posts/example-post/custom-voice.gif)
+![Custom Voice player](https://res.cloudinary.com/drcrnibbz/image/upload/v1672295176/custom-voice-player.gif)
 
 I remember getting a taxi to get home by around 1:30 AM, sleeping, and getting back to the office by 9:30 AM. It was my first 16-hour workday and the exhaustion was catching up to me. After the custom voice project finished, I was excited to finally be assigned work on developing new featuers on our audio web app service. I coded some Redux thunks and slices so that the altered pitches users applied to their text-to-speech audio would save on the backend and the correct pitch would play on the frontend.
 
-![pitch](/images/posts/example-post/pitch.gif)
+![Voice Lab pitch](https://res.cloudinary.com/drcrnibbz/image/upload/v1672295170/voice-lab-pitch.gif)
 
 We were keeping track of our productivity using Jira at the time, and I was feeling depressed because I could not finish all the tasks I was assigned. I would bring my laptop on the weekends, try to do the most I could, and then come back the Monday after to repeat the cycle again. In a meeting we analyzed our burn-down chart and saw that our total frontend team of 5 developers weren't able to complete a remaining total of about 100 hours of work for the past few weeks. We tried to reduce the worklord by assigning fewer hours per developer, but the deadlines were short and uncompromising.
 
@@ -100,7 +100,7 @@ I was also struggling to communicate in Korean with my teammates as I had grown 
 
 Turns out I was still very sick because the night after I left the hospital, my stomach pains were getting worse. So I returned to the emergency room again and was hospitalized for a total of 11 days. This was the most ill I have ever been in my life. The hospital would give me some rice porridge for my meals, but my stomach could not even digest that. After days of not properly eating, I lost weight as a large white bag of nutrients were beeing fed into my veins so I would not starve.
 
-![hospital food](/images/posts/example-post/hospital-food.jpeg)
+![hospital food](https://res.cloudinary.com/drcrnibbz/image/upload/v1672294801/hospital-food.jpg)
 
 Shortly after leaving the hospital, I signed my resignation papers and recuperated at home. Ater eating small portions of bananas, boiled potatoes, rice, and lactose-free bread, I was feeling better and regained most of my lost weight.
  
