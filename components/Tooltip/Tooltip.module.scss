@@ -29,6 +29,9 @@
 
 .tooltipText-top {
   top: calc(var(--spacing-3xl) * -1);
+  @include xl {
+    top: calc(var(--spacing-4xl) * -1);
+  }
   &::before {
     top: 100%;
     border-top-color: var(--bg-zinc-900);
@@ -49,7 +52,7 @@
 }
 
 .tooltipText-bottom {
-  bottom: calc(var(--spacing-3xl) * -1);
+  bottom: calc(var(--spacing-4xl) * -1);
   &::before {
     bottom: 100%;
     border-bottom-color: var(--bg-zinc-900);
