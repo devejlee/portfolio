@@ -23,10 +23,10 @@ const BlogPosts = () => {
     <div className={styles.postsWrapper}>
       {posts.map((post) => {
         const { slug, frontmatter } = post;
-        const { bannerImage, title, date } = frontmatter;
+        const { title, date, bannerImage, alt } = frontmatter;
 
         return (
-          <BlogCard key={slug} slug={slug} bannerImage={bannerImage} title={title} date={date} />
+          <BlogCard key={slug} slug={slug} title={title} date={date} bannerImage={bannerImage} alt={alt} />
         );
       })}
     </div>

@@ -2,7 +2,8 @@
 title: "My Journey in Frontend Development (2015-2022)"
 author: "Elijah Lee"
 date: "December 24, 2022"
-bannerImage: "/images/posts/example-post/mountain-road.jpg"
+bannerImage: "cld-sample-5"
+alt: "mountain road"
 tags:
     - personal
 ---

@@ -1,19 +1,20 @@
 import styles from '@components/BlogCard/BlogCard.module.scss';
-import Image from 'next/image';
 import Link from 'next/link';
+import { CloudinaryImage } from '@components/CloudinaryImage/CloudinaryImage';
 
 interface BlogCardProps {
   slug: string
-  bannerImage: string
   title: string
   date: string
+  bannerImage: string
+  alt: string
 }
 
-const BlogCard = ({ slug, bannerImage, title, date }: BlogCardProps) => {
+const BlogCard = ({ slug, title, date, bannerImage, alt }: BlogCardProps) => {
   return (
     <Link href={`/blog/${slug}`} className={styles.card}>
       <div className={styles.bannerImageWrapper}>
-        <Image src={bannerImage} alt="post image" fill />
+        <CloudinaryImage id={bannerImage} alt={alt} fill />
       </div>
       <div className={styles.cardBody}>
         <h3>{title}</h3>
