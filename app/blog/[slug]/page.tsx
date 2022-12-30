@@ -2,6 +2,7 @@ import styles from './page.module.scss';
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
+import { GiscusClientWrapper } from '@components/GiscusClientWrapper/GiscusClientWrapper';
 
 export const generateStaticParams = async () => {
   // get list of all files from posts directory
@@ -40,6 +41,7 @@ const Page = async ({ params }: PageProps) => {
       <h3>{title}</h3>
       <p>{date}</p>
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: md().render(data.content) }} />
+      <GiscusClientWrapper />
     </div>
   );
 };
