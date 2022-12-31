@@ -1,8 +1,8 @@
+import { GiscusClientWrapper } from '@components/GiscusClientWrapper/GiscusClientWrapper';
 import styles from './page.module.scss';
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
-import { GiscusClientWrapper } from '@components/GiscusClientWrapper/GiscusClientWrapper';
 
 export const generateStaticParams = async () => {
   // get list of all files from posts directory
