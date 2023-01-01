@@ -1,15 +1,15 @@
 import * as admin from 'firebase-admin';
 
-const DATABASE_URL = process.env.NEXT_PUBLIC_PRIVATE_KEY as string;
+const PRIVATE_KEY = process.env.PRIVATE_KEY as string;
 
 if (!admin.apps.length) {
   admin.initializeApp({
     credential: admin.credential.cert({
-      clientEmail: process.env.NEXT_PUBLIC_CLIENT_EMAIL,
-      projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
-      privateKey: DATABASE_URL.replace(/\\n/g, '\n')
+      clientEmail: process.env.CLIENT_EMAIL,
+      projectId: process.env.PROJECT_ID,
+      privateKey: PRIVATE_KEY.replace(/\\n/g, '\n')
     }),
-    databaseURL: process.env.NEXT_PUBLIC_DATABASE_URL
+    databaseURL: process.env.DATABASE_URL,
   });
 }
 
