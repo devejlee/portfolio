@@ -1,6 +1,7 @@
 // // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { database } from '@utils/firebase';
+import { removePeriods } from '@utils/index';
 
 export default async function handler(req: any, res: NextApiResponse) {
   if (req.method === 'POST') {
@@ -9,7 +10,7 @@ export default async function handler(req: any, res: NextApiResponse) {
     const ipAddress = data.ip;
 
     const countRef = database.ref('views').child(req.query.slug).child('count');
-    const ipRef = database.ref('views').child(req.query.slug).child('ipAddresses').child('ip');
+    const ipRef = database.ref('views').child(req.query.slug).child('ipAddresses').child(removePeriods(ipAddress));
     let count = 0;
 
     const ipSnapshot = await ipRef.once('value');
@@ -27,7 +28,7 @@ export default async function handler(req: any, res: NextApiResponse) {
       });
       count = snapshot.val();
       // add the IP address to the list of IP addresses
-      ipRef.set(ipAddress);
+      ipRef.set(true);
     }
 
     return res.status(200).json({
