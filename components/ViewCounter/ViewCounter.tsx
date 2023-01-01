@@ -17,7 +17,7 @@ const ViewCounter = ({ params }: ViewCounterProps) => {
       });
       const data = await response.json();
       console.log('data', data);
-      setViewCount(data.views);
+      setViewCount(data.total);
     };
 
     registerView();
