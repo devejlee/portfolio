@@ -1,7 +1,24 @@
 // // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { database } from '@utils/firebase';
+// import { database } from '@utils/firebase';
 import { removePeriods } from '@utils/index';
+
+import * as admin from 'firebase-admin';
+
+const DATABASE_URL = process.env.NEXT_PUBLIC_PRIVATE_KEY as string;
+
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert({
+      clientEmail: process.env.NEXT_PUBLIC_CLIENT_EMAIL,
+      projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+      privateKey: DATABASE_URL.replace(/\\n/g, '\n')
+    }),
+    databaseURL: process.env.NEXT_PUBLIC_DATABASE_URL
+  });
+}
+
+const database = admin.database();
 
 export default async function handler(req: any, res: NextApiResponse) {
   if (req.method === 'POST') {
