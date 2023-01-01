@@ -1,6 +1,6 @@
 // // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDatabase, ref, set, get, child } from 'firebase/database';
+import { getDatabase, ref, set, get, child, update } from 'firebase/database';
 import { database } from '@utils/firebase';
 
 // type Data = {
@@ -16,20 +16,45 @@ export const test = async (req: any, res: NextApiResponse<any>) => {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // res.status(200).json({ name: 'John Doe' });
-
-    // increment the views
     if (req.method === 'POST') {
-      const test = set(ref(database, 'views'), 1);
+      let count = 0;
+      // increment the view
+      await get(child(ref(getDatabase()), 'views')).then(async (snapshot) => {
+        if (snapshot.exists()) {
+          console.log('snapshot.val()', snapshot.val());
+          const updatedCount = snapshot.val()[`${req.query.slug}`].count + 1;
+          update(ref(database), {
+            [`/views/${req.query.slug}/count`]: updatedCount
+          });
+          count = updatedCount;
+        } else {
+          console.log('No data available');
+          const response = await fetch('https://api.ipify.org?format=json');
+          const data = await response.json();
+          const ipAddress = data.ip;
+
+          set(ref(database, `/views/${req.query.slug}`), { 
+            ipAddresses: { 
+              ip: ipAddress 
+            },
+            count: 1
+          });
+          count = 1;
+        }
+      }).catch((error) => {
+        console.error(error);
+      });
+
       return res.status(200).json({
-        total: test
+        views: count
       });
     }
   
     // fetch the views
     if (req.method === 'GET') {
-      console.log('database', database);
+      console.log('req.query', req.query);
       get(child(ref(getDatabase()), 'views')).then((snapshot) => {
+        console.log('snapshot', snapshot);
         if (snapshot.exists()) {
           console.log('snapshot.val()', snapshot.val());
           return res.status(200).json({ total: snapshot.val() });
