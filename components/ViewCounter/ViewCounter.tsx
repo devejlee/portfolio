@@ -15,7 +15,7 @@ const fetcher = async (url: string) => {
 };
 
 const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
-  const views = useSWR(
+  const { data, isLoading, error, mutate } = useSWR(
     `/api/views/?slug=${slug}`,
     fetcher
   );
@@ -28,12 +28,13 @@ const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
         method: 'POST',
       });
       const data = await response.json();
+      mutate({ ...data, total: data.total + 1 });
     };
 
     registerView();
-  }, [blogPage, slug]);
+  }, [blogPage, slug, mutate]);
 
-  if (views.error) {
+  if (error) {
     return (
       <div className={styles.wrapper}>
         <AiOutlineEye />
@@ -42,7 +43,7 @@ const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
     );
   }
 
-  if (views.isLoading) {
+  if (isLoading) {
     return (
       <div className={styles.wrapper}>
         <AiOutlineEye />
@@ -54,7 +55,7 @@ const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
   return (
     <div className={styles.wrapper}>
       <AiOutlineEye />
-      <span>{views.data.total > 0 ? views.data.total : 0} views</span>
+      <span>{data.total ?? 0} views</span>
     </div>
   );
 };
