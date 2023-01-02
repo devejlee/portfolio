@@ -4,21 +4,24 @@ export const useFadeIn = <T extends HTMLElement>(delay = 0) => {
   const elementRef = useRef<T | null>(null);
 
   useEffect(() => {
-    const ref = elementRef.current;
-    if (!ref) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            if (!ref) return;
-            ref.classList.add('fade-in');
-          }, delay);
+        if (entry.intersectionRatio > 0) {
+          if (!elementRef.current) return;
+          elementRef.current.classList.add('fade-in');
         }
       }
     );
-    observer.observe(ref);
+
+    const timeout = setTimeout(() => {
+      if (elementRef.current) {
+        observer.observe(elementRef.current);
+      }
+    }, delay);
+
     return () => {
-      observer.unobserve(ref);
+      clearTimeout(timeout);
+      observer.disconnect();
     };
   }, [delay]);
 
