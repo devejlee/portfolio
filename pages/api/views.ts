@@ -35,4 +35,12 @@ export default async function handler(req: any, res: NextApiResponse) {
       total: count,
     });
   }
+
+  if (req.method === 'GET') {
+    const countRef = database.ref('views').child(req.query.slug).child('count');
+    const countSnapshot = await countRef.once('value');
+    const count = countSnapshot.val();
+
+    return res.status(200).json({ total: count });
+  }
 }

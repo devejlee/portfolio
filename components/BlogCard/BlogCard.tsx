@@ -1,5 +1,6 @@
 import styles from '@components/BlogCard/BlogCard.module.scss';
 import { CloudinaryImage } from '@components/CloudinaryImage/CloudinaryImage';
+import { ViewCounter } from '@components/ViewCounter/ViewCounter';
 import Link from 'next/link';
 
 interface BlogCardProps {
@@ -19,6 +20,7 @@ const BlogCard = ({ slug, title, date, bannerImage, alt }: BlogCardProps) => {
       <div className={styles.cardBody}>
         <h3>{title}</h3>
         <time className="text-gradient">{date}</time>
+        <ViewCounter blogPage slug={slug} />
       </div>
     </Link>
   );
