@@ -28,7 +28,7 @@ const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
         method: 'POST',
       });
       const data = await response.json();
-      mutate({ ...data, total: data.total + 1 });
+      mutate({ ...data });
     };
 
     registerView();
