@@ -2,17 +2,16 @@
 import { useEffect, useState } from 'react';
 
 interface ViewCounterProps {
-  params: {
-    slug: string
-  }
+  blogPage: boolean
+  slug: string
 }
 
-const ViewCounter = ({ params }: ViewCounterProps) => {
+const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
   const [viewCount, setViewCount] = useState(0);
 
   useEffect(() => {
     const registerView = async () => {
-      const response = await fetch(`/api/views/?slug=${params.slug}`, {
+      const response = await fetch(`/api/views/?slug=${slug}`, {
         method: 'POST',
       });
       const data = await response.json();
@@ -21,7 +20,7 @@ const ViewCounter = ({ params }: ViewCounterProps) => {
     };
 
     registerView();
-  }, [params.slug]);
+  }, [slug]);
 
   return (
     <>
