@@ -2,23 +2,15 @@
 import styles from '@components/ViewCounter/ViewCounter.module.scss';
 import { useEffect } from 'react';
 import { AiOutlineEye } from 'react-icons/ai';
-import useSWR from 'swr';
+import { useViews } from '@hooks/useViews';
 
 interface ViewCounterProps {
   blogPage: boolean
   slug: string
 }
 
-const fetcher = async (url: string) => {
-  const res = await fetch(url);
-  return res.json();
-};
-
 const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
-  const { data, isLoading, error, mutate } = useSWR(
-    `/api/views/?slug=${slug}`,
-    fetcher
-  );
+  const { data, isLoading, error, mutate } = useViews(slug);
 
   useEffect(() => {
     if (blogPage) return;
