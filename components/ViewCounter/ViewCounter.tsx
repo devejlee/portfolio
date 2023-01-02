@@ -1,5 +1,7 @@
 'use client';
+import styles from '@components/ViewCounter/ViewCounter.module.scss';
 import { useEffect, useState } from 'react';
+import { AiOutlineEye } from 'react-icons/ai';
 
 interface ViewCounterProps {
   blogPage: boolean
@@ -35,9 +37,10 @@ const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
   }, [blogPage, slug]);
 
   return (
-    <>
-      views: {viewCount}
-    </>
+    <div className={styles.wrapper}>
+      <AiOutlineEye />
+      <span>{viewCount > 0 ? viewCount : '—'} views</span>
+    </div>
   );
 };
 

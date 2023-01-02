@@ -1,0 +1,8 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  span {
+    margin-left: var(--spacing-sm);
+  }
+}
