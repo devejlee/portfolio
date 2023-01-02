@@ -3,7 +3,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { database } from '@utils/firebase';
 import { removePeriods } from '@utils/index';
 
-export default async function handler(req: any, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (typeof req.query.slug !== 'string') return;
   if (req.method === 'POST') {
     const response = await fetch('https://api.ipify.org?format=json');
     const data = await response.json();
