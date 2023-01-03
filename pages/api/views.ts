@@ -1,26 +1,20 @@
 // // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { database } from '@utils/firebase';
-import { removePeriods } from '@utils/index';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (typeof req.query.slug !== 'string') return;
   if (req.method === 'POST') {
-    const response = await fetch('https://api.ipify.org?format=json');
-    const data = await response.json();
-    const ipAddress = data.ip;
-
     const countRef = database.ref('views').child(req.query.slug).child('count');
-    const ipRef = database.ref('views').child(req.query.slug).child('ipAddresses').child(removePeriods(ipAddress));
     let count = 0;
 
-    const ipSnapshot = await ipRef.once('value');
-    if (ipSnapshot.exists()) {
-      // IP address has already made a request, return the current count
+    const cookie = req.headers.cookie;
+    if (cookie && cookie.includes('visited=true')) {
+      // User has already visited the page, return the current count
       const countSnapshot = await countRef.once('value');
       count = countSnapshot.val();
     } else {
-      // IP address has not made a request, update the count
+      // User has not visited the page before, update the count
       const { snapshot } = await countRef.transaction((currentViews) => {
         if (currentViews === null) {
           return 1;
@@ -28,8 +22,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return currentViews + 1;
       });
       count = snapshot.val();
-      // add the IP address to the list of IP addresses
-      ipRef.set(true);
+      // Set the visited cookie to true
+      res.setHeader('Set-Cookie', 'visited=true; Max-Age=86400');
     }
 
     return res.status(200).json({
