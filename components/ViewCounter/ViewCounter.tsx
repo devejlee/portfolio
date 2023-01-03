@@ -12,6 +12,8 @@ interface ViewCounterProps {
 const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
   const { data, isLoading, error, mutate } = useViews(slug);
 
+  console.log('data', data, 'isLoading', isLoading, 'error', error);
+
   useEffect(() => {
     if (blogPage) return;
 
