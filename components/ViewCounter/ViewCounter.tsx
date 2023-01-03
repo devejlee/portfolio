@@ -12,8 +12,6 @@ interface ViewCounterProps {
 const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
   const { data, isLoading, error, mutate } = useViews(slug);
 
-  console.log('data', data, 'isLoading', isLoading, 'error', error);
-
   useEffect(() => {
     if (blogPage) return;
 
@@ -28,11 +26,12 @@ const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
     registerView();
   }, [blogPage, slug, mutate]);
 
+  // TODO: fix "Too many requests FUNCTION_RATE_LIMIT" error from GET request
   if (error) {
     return (
       <div className={styles.wrapper}>
         <AiOutlineEye />
-        <span>error</span>
+        <span>— views</span>
       </div>
     );
   }
