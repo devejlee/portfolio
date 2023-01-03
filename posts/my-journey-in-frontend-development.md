@@ -8,16 +8,16 @@ tags:
     - personal
 ---
 
-## 2015-2016
-### WordPress and Fencing
+### 2015-2016
+#### WordPress and Fencing
 
 For whatever reason, I searched "What is HTML?" in Google and began reading a [book](https://htmlandcssbook.com/sample-chapter/) about basic HTML & CSS. As a naive freshman college student, I thought I could learn just by reading pages of code. So after 200 pages, I was feeling quite confident that I knew a thing or two about HTML and CSS. It wasn't until I opened a Windows Notepad in my school library and tried to type some HTML that I realized I didn't know much at all.
 
 I searched how to make websites without coding on YouTube and found a [video tutorial](https://www.youtube.com/watch?v=F0Dx7fmAINM) on making a WordPress website with a drag-and-drop builder. After  spending hours figuring out how to stop [Skype from using my localhost port](https://stackoverflow.com/questions/30415201/apache-needs-port-80-mamp) and installing MAMP to have a local PHP and MySQL server to run WordPress on my Windows laptop, I followed YouTube tutorials on how to make blogging and e-commerce WordPress sites.
 
 I particpated in my university fencing club at the time, and we had an outdated WordPress website introducing our club. I offered to redesign the website for free to practice using WordPress. After borrowing a camera and hiring 2 friends by buying them dinner, we had a photo shoot showcasing our fencing equipment and facilities. I used the drag-and-drop builder to easily create uniform layouts, modify the font-size and text color, and make the site mobile-responsive. Within a few days, I had my first WordPress website on the web.
-## 2017
-### HTML, CSS, and JavaScript
+### 2017
+#### HTML, CSS, and JavaScript
 
 After using with WordPress, I wanted to challenge myself by making a website with vanilla HTML, CSS, and JavaScript. I was inspired by a website that displayed the history of website development in chapter format to make a similar website for my short stories I wrote for a college writing class. I learned how to use Github and Github Pages to host my [small website](https://eliya33.github.io/stories/index.html). It wasn't much, but the experience was useful for the next project I had in mind.
 
@@ -26,8 +26,8 @@ I wanted to make a multipage mobile responsive website by the end of the semeste
 
 2018 was approaching, and I didn't have much time before my 2 year [mandatory military service](https://en.wikipedia.org/wiki/Conscription_in_South_Korea). My last project before I was conscripted was to create a WordPress website with the drag and drop builder for my college newsmagazine club. They only distributed their articles on physical copies at the end of the semester, and I suggested they could use a CMS to share articles onlines more freuqently throughout the year. As always, I was willing to work for free. So after getting a domain from Godaddy and spending the hot Korean summer coding in a cafe, I made my last WordPress website and was admitted into the Republic of Korea Air Force.
 
-## 2018-2019
-### Military, Poetry, and React
+### 2018-2019
+#### Military, Poetry, and React
 
 While serving in the air force, a close college professor contacted me for a favor. She wanted a website so students could make reservations in the new writing center to help improve their writing skils. She had asked our college office to make a website, but the bureaucracy and slow response frustrated her enough to turn to me while I was in the military. I was happy to comply but replied that I couldn't access my Github with the military computers. So I needed a paid [codepen](https://codepen.io/your-work) pro account to develop and store files. I also could only use the computers for "educational purposes" after 10:00 PM, so it would also take some time. She had the college pay the yearly subscription fee, and I used Bootstrap and an iframe reservation widget and delivered a working website within 2 weeks. She was pleased with the result and had the college pay me around $150 for my work although I didn't expect payment at all.
 
@@ -41,8 +41,8 @@ Now that I felt very comforatble with vanilla HTML, CSS, and JavaScript, it was 
 
 2020 was approaching, signalling the end of my military service. I was excited to return to school and reconnect with old friends. Nothing bad could happen, right?
 
-## 2020
-### Gatsby and Job Applications
+### 2020
+#### Gatsby and Job Applications
 
 The coronavirus took over the world. All classes were online, but on the bright side, I had more time to for my next big project: remaking the WordPress website I made for my college newmagazine club with Gatsby and React. Hosting the WordPress site was costing the club $200 every 6 months, and I thought it was my responsibility to bring that cost to $0 while recognizing an excellent opportunity to learn Gatsby and use static site generators.
 
@@ -56,8 +56,8 @@ I was ecstatic that I had an offer on the table. And as luck would have it, a CT
 
 I had not even graduated yet but I already had a job secured. All those years of work and planning had finally paid off, and I was ready to start my career. 
 
-## 2021-2022
-### Nextjs and My First Job
+### 2021-2022
+#### Nextjs and My First Job
 
 Working 8 hours a day in a professional setting was much different than working on personal projects in college. I had previously only written React with class components in JavaScript and was now writing them with functional components in TypeScript. I became more familiar with various scenarios using different React hooks and familiarized myself with Nextjs that was used for all our frontend products.
 
@@ -73,8 +73,8 @@ Quitting my first job wasn't an easy decision, but I truly believe I wouldn't ha
 
 In the end, I was grateful for the opportunity to work as a junior frontend developer in my first job, but I outgrew the company and decided to move jobs to another company that was more focused on improving existing problems than ignoring them until something broke.
 
-## 2022-2023
-### NFTs, Web3, and My Second Job
+### 2022-2023
+#### NFTs, Web3, and My Second Job
 
 I was fortunate enough to get my second job a month after quitting my first. I had initally accepted the offer thinking that I would be working mainly on the frontend side of integrating audio and machine learning in our services. I couldn't imagine I would be working on NFTs and web3 because those words were nowhere in the job description, and I wasn't asked about them in the job interview. So after an inital project of redesigning the company website with Nextjs and Tailwind, I was again the sole frontend developer of another small team where we were tasked to create a staking web-app for our NFTs.
 
@@ -105,11 +105,5 @@ Turns out I was still very sick because the night after I left the hospital, my 
 Shortly after leaving the hospital, I signed my resignation papers and recuperated at home. Ater eating small portions of bananas, boiled potatoes, rice, and lactose-free bread for a few days, I was feeling better and regained most of my lost weight after a few weeks.
  
 After much reflection, I realized that I needed to give myself ample time to rest before searching for my next job. My second job also made me realize what I needed to work on to become a better fronted developer. I wanted to learn more about authentication, cookies, CI/CD, and deeply consider the interfaces of my components to make them reusable for other developers. 
-
-Like I've done so many times before, I gave myself a new list of goals.
-
-1. Remake my portfolio website using Nextjs 13, Zustand, NextAuth, and Github Actions.
-2. Finish a Udemy course on data structures and algorithms.
-3. Make a budget app using React Native, Redux, and a backend database.
 
 In 2015, I had a dream of one day leaving Korea to work abroad. 8 years have passed since then with the coming of 2023, but that dream is still the compass for my career. There's still so much I want to learn about frontend and backend development. And I'm going to keep going forward, no matter what.
