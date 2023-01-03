@@ -40,8 +40,10 @@ const Page = async ({ params }: PageProps) => {
   return (
     <div>
       <h3>{title}</h3>
-      <p>{date}</p>
-      <ViewCounter blogPage={false} slug={params.slug} />
+      <div className={styles.info}>
+        <span>{date}</span>
+        <ViewCounter blogPage={false} slug={params.slug} />
+      </div>
       <hr />
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: md().render(data.content) }} />
       <GiscusClientWrapper />

@@ -1,3 +1,11 @@
+.info {
+  display: flex;
+  span {
+    margin-right: var(--spacing-sm);
+    font-size: .8em;
+  }
+}
+
 .content {
   a {
     text-decoration: underline;
