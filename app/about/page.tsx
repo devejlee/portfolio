@@ -46,8 +46,9 @@ const AboutPage = () => {
     <div>
       <section>
         <h2>About <span className="text-gradient">Elijah Lee</span></h2>
-        <p>Hey, I&apos;m Elijah! I started making websites with WordPress as a freshman college student in 2015 as a hobby. That passion persisted for years as I dived into the vast and ever-expanding world of frontend development. I love how coding gives me the freedom to convert my ideas into reality, so long as I put in the time and effort.</p>
-        <p>I have 2+ years of professional experience working as a frontend developer. I have done everything from creating that pixel-perfect layout with CSS, managing and debugging complex client and server states with Redux and React Query, and even working on web3 and NFT projects. I am always open to learning something new.</p>
+        <p>Hey, I&apos;m Elijah! I am a frontend developer based in Seoul. I started making websites with WordPress as a freshman college student in 2015 as a hobby. That hobby turned into a career as I taught myself through various online tutorials, articles, and side projects. I am passionate about learning and building great web applications.</p>
+        <p>I have 2+ years of professional experience working as a frontend developer. I have done everything from creating that pixel-perfect layout with CSS and component UI libraries, managing and debugging complex client and server states with Redux and React Query, and even working on web3 and NFT projects.</p>
+        <p>Some of my hobbies include playing Magic: The Gathering Arena, watching anime, and building side projects to learn new technologies and trends.</p>
       </section>
       <section>
         <h3>Skills</h3>
