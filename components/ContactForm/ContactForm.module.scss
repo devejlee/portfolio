@@ -14,14 +14,15 @@
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
-    color: #fff;
+    color: var(--bg-zinc-100);
     background: var(--bg-zinc-700);
     border: 1px solid var(--bg-zinc-400);
     border-radius: 5px;
     outline: none;
     &:-webkit-autofill {
-      -webkit-transition-delay: 9999s;
-     transition-delay: 9999s;
+      -webkit-text-fill-color: var(--bg-zinc-100);
+      -webkit-box-shadow: 0 0 0 30px var(--bg-zinc-700) inset;
+      caret-color: var(--bg-zinc-100);
     }
   }
   textarea {
