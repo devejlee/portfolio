@@ -1,6 +1,7 @@
 'use client';
-import React from 'react';
+import styles from '@components/ContactForm/ContactForm.module.scss';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import React from 'react';
 
 interface ContactFormValues {
   name: string;
@@ -9,7 +10,7 @@ interface ContactFormValues {
 }
 
 const ContactForm = () => (
-  <div>
+  <div className={styles.form}>
     <Formik
       initialValues={{ name: '', email: '', message: '' }}
       validate={values => {
@@ -36,17 +37,17 @@ const ContactForm = () => (
         }, 400);
       }}
     >
-      {({ isSubmitting }) => (
+      {({ errors, touched, isSubmitting }) => (
         <Form>
           <label htmlFor="name">Name</label>
-          <Field name="name" type="text" />
-          <ErrorMessage name="name" component="div" />
+          <Field name="name" type="text" className={`${touched.name && errors.name && styles.error}`} />
+          <ErrorMessage name="name" component="div" className={styles.errorMessage} />
           <label htmlFor="email">Email Address</label>
-          <Field type="email" name="email" />
-          <ErrorMessage name="email" component="div" />
+          <Field type="email" name="email" className={`${touched.email && errors.email && styles.error}`} />
+          <ErrorMessage name="email" component="div" className={styles.errorMessage} />
           <label htmlFor="message">Message</label>
-          <Field name="message" as="textarea" className="form-textarea" />
-          <ErrorMessage name="message" component="div" />
+          <Field name="message" as="textarea" className={`${touched.message && errors.message && styles.error}`} />
+          <ErrorMessage name="message" component="div" className={styles.errorMessage} />
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>

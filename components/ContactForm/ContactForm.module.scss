@@ -1,0 +1,43 @@
+@import "@styles/mixins";
+
+.form {
+  max-width: 37.5rem;
+  label {
+    display: block;
+    &:not(:first-child) {
+      margin-top: var(--spacing-md);
+    }
+  }
+  input, 
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background: var(--bg-zinc-700);
+    border: 1px solid var(--bg-zinc-400);
+    border-radius: 5px;
+    outline: none;
+  }
+  textarea {
+    min-height: 12.5rem;
+  }
+  input.error,
+  textarea.error {
+    border: 2px solid var(--bg-red-400);
+  }
+  button {
+    display: block;
+    margin-top: var(--spacing-md);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+  }
+}
+
+.errorMessage {
+  font-size: .9rem;
+  color: var(--bg-red-400);
+}
