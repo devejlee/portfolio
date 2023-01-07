@@ -2,6 +2,7 @@ import styles from '@app/about/page.module.scss';
 import { Tooltip } from '@components/Tooltip/Tooltip';
 import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
+import { ContactForm } from '@components/ContactForm/ContactForm';
 
 const AboutPage = () => {
   const skills = [
@@ -61,6 +62,10 @@ const AboutPage = () => {
             </Tooltip>
           ))}
         </div>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <ContactForm />
       </section>
     </div>
   );
