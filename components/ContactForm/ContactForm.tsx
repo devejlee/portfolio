@@ -6,6 +6,7 @@ import React from 'react';
 interface ContactFormValues {
   name: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -13,11 +14,14 @@ const ContactForm = () => {
   return (
     <div className={styles.form}>
       <Formik
-        initialValues={{ name: '', email: '', message: '' }}
+        initialValues={{ name: '', email: '', subject: '', message: '' }}
         validate={values => {
           const errors: Partial<ContactFormValues> = {};
           if (!values.name) {
             errors.name = 'Please enter a name';
+          }
+          if (!values.subject) {
+            errors.subject = 'Please enter a subject';
           }
           if (!values.message) {
             errors.message = 'Please enter a message';
@@ -32,14 +36,12 @@ const ContactForm = () => {
           return errors;
         }}
         onSubmit={async (values, { setSubmitting }) => {
-          const response = await fetch('/api/contact', {
+          fetch('/api/contact', {
             method: 'POST',
+            body: JSON.stringify(values),
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           });
-          const data = await response.json();
-          // setTimeout(() => {
-          //   alert(JSON.stringify(values, null, 2));
-          //   setSubmitting(false);
-          // }, 400);
+          setSubmitting(false);
         }}
       >
         {({ errors, touched, isSubmitting }) => (
@@ -50,6 +52,9 @@ const ContactForm = () => {
             <label htmlFor="email">Email Address</label>
             <Field type="email" name="email" className={`${touched.email && errors.email && styles.error}`} />
             <ErrorMessage name="email" component="div" className={styles.errorMessage} />
+            <label htmlFor="subject">Subject</label>
+            <Field name="subject" type="text" className={`${touched.subject && errors.subject && styles.error}`} />
+            <ErrorMessage name="subject" component="div" className={styles.errorMessage} />
             <label htmlFor="message">Message</label>
             <Field name="message" as="textarea" className={`${touched.message && errors.message && styles.error}`} />
             <ErrorMessage name="message" component="div" className={styles.errorMessage} />
