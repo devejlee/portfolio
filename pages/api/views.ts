@@ -1,8 +1,7 @@
-// // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { database } from '@utils/firebase';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (typeof req.query.slug !== 'string') return;
   if (req.method === 'POST') {
     const countRef = database.ref('views').child(req.query.slug).child('count');
@@ -38,4 +37,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ total: count });
   }
-}
+};
+
+export default handler;
