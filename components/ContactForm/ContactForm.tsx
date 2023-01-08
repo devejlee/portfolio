@@ -72,8 +72,8 @@ const ContactForm = () => {
             <button type="submit" disabled={isSubmitting}>
               Submit
             </button>
-            {status && status.success && <p className={styles.successStatus}>{status.success}</p>}
-            {status && status.error && <p className={styles.errorStatus}>{status.error}</p>}
+            {status?.success && <p className={styles.successStatus}>{status.success}</p>}
+            {status?.error && <p className={styles.errorStatus}>{status.error}</p>}
           </Form>
         )}
       </Formik>
