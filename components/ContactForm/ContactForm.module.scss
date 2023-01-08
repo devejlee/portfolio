@@ -46,6 +46,15 @@
 }
 
 .errorMessage {
-  font-size: .9rem;
+  color: var(--bg-red-400);
+}
+
+.successStatus {
+  margin-top: var(--spacing-md);
+  color: var(--bg-green-400);
+}
+
+.errorStatus {
+  margin-top: var(--spacing-md);
   color: var(--bg-red-400);
 }

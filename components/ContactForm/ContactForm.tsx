@@ -35,16 +35,27 @@ const ContactForm = () => {
           }
           return errors;
         }}
-        onSubmit={async (values, { setSubmitting }) => {
-          fetch('/api/contact', {
-            method: 'POST',
-            body: JSON.stringify(values),
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          });
-          setSubmitting(false);
+        onSubmit={async (values, { resetForm, setStatus }) => {
+          // If onSubmit is async, Formik automatically sets isSubmitting to false once it resolves
+          try {
+            const res = await fetch('/api/contact', {
+              method: 'POST',
+              body: JSON.stringify(values),
+              headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            });
+            if (!res.ok) {
+              throw new Error(`Error sending message: ${res.status}`);
+            }
+            resetForm({ values: { name: '', email: '', subject: '', message: '' } });
+            setStatus({ success: 'Email successfully sent' });
+          } catch (error) {
+            console.error(error);
+            setStatus({ error: 'There was an error sending the message. Please try again later.' });
+            throw error;
+          }
         }}
       >
-        {({ errors, touched, isSubmitting }) => (
+        {({ errors, touched, status, isSubmitting }) => (
           <Form>
             <label htmlFor="name">Name</label>
             <Field name="name" type="text" className={`${touched.name && errors.name && styles.error}`} />
@@ -61,6 +72,8 @@ const ContactForm = () => {
             <button type="submit" disabled={isSubmitting}>
               Submit
             </button>
+            {status && status.success && <p className={styles.successStatus}>{status.success}</p>}
+            {status && status.error && <p className={styles.errorStatus}>{status.error}</p>}
           </Form>
         )}
       </Formik>
