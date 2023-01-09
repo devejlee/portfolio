@@ -33,7 +33,8 @@ const CloudinaryImage = ({ id, alt, width, height, fill, loader, quality, priori
       right: '0',
       backgroundImage: `url(${urlBlurred})`,
       backgroundPosition: 'center center',
-      backgroundSize: '100%'
+      backgroundSize: '100%',
+      backgroundRepeat: 'no-repeat'
     }}>
       <Image
         src={url}

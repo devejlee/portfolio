@@ -1,9 +1,16 @@
 @import "@styles/mixins";
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include sm {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   p {
-    @include xl {
-      max-width: 50rem;
+    @include md {
+      max-width: 40rem;
     }
   }
 }
@@ -25,4 +32,18 @@
 
 .icon {
   margin-right: var(--spacing-xs);
+}
+
+.laptop {
+  position: relative;
+  max-width: 15.625rem;
+  width: 100%;
+  height: 15.625rem;
+  @include md {
+    max-width: 21.875rem;
+    height: 21.875rem;
+  }
+  img {
+    object-fit: contain;
+  }
 }
