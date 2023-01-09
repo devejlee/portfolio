@@ -1,10 +1,16 @@
 @import "@styles/mixins";
 
 .globalNav {
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-xl) 0;
+  @include xl {
+    max-width: 75rem;
+  }
   ul {
     display: flex;
     flex-wrap: wrap;
     a {
+      padding: var(--spacing-xs);
       @include text-xs;
       display: block;
       margin-right: var(--spacing-md);

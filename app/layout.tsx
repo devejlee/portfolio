@@ -15,9 +15,8 @@ const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="en" className={inter.className}>
     <head />
     <body>
-      <div className={styles.gradientTop}></div>
+      <GlobalHeader />
       <div className={styles.globalWrapper}>
-        <GlobalHeader />
         <main className={styles.childrenWrapper}>
           {children}
         </main>

@@ -1,3 +1,15 @@
+@import "@styles/mixins";
+
 .header {
-  padding-top: var(--spacing-lg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: var(--bg-zinc-800);
+}
+
+.gradientTop {
+  @include bg-gradient;
+  height: var(--spacing-sm);
 }

@@ -12,10 +12,5 @@
 }
 
 .childrenWrapper {
-  padding: var(--spacing-lg) 0;
-}
-
-.gradientTop {
-  @include bg-gradient;
-  height: var(--spacing-sm);
+  padding: calc(var(--spacing-lg) + 80px) 0;
 }
