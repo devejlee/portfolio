@@ -1,6 +1,7 @@
 @import "@styles/mixins";
 
-.wrapper {
+// intro
+.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,4 +47,9 @@
   img {
     object-fit: contain;
   }
+}
+
+// latest posts
+.latestPosts {
+  margin-top: var(--spacing-4xl);
 }

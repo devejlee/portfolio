@@ -1,4 +1,5 @@
 import styles from '@app/page.module.scss';
+import { BlogPosts } from '@components/BlogPosts/BlogPosts';
 import { CloudinaryImage } from '@components/CloudinaryImage/CloudinaryImage';
 import { IoDocument } from 'react-icons/io5';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
@@ -6,7 +7,7 @@ import { SiGithub, SiLinkedin } from 'react-icons/si';
 const Page = () => {
   return (
     <>
-      <section className={styles.wrapper}>
+      <section className={styles.intro}>
         <div>
           <h2>Hi! I&apos;m <span className="text-gradient">Elijah</span></h2>
           <p>Welcome to my website! 👨‍💻</p>
@@ -35,6 +36,10 @@ const Page = () => {
         <div className={styles.laptop}>
           <CloudinaryImage id="laptop-black" alt="laptop" fill />
         </div>
+      </section>
+      <section className={styles.latestPosts}>
+        <h3><span className="text-gradient">Latest Posts</span></h3>
+        <BlogPosts />
       </section>
     </>
   );
