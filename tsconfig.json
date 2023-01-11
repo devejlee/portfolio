@@ -22,12 +22,13 @@
     "paths": {
       "@api/*": ["api/*"],
       "@app/*": ["app/*"],
+      "@components/*": ["components/*"],
       "@data/*": ["data/*"],
       "@hooks/*": ["hooks/*"],
-      "@typedef/*": ["typedef/*"],
-      "@components/*": ["components/*"],
       "@public/*": ["public/*"],
+      "@store/*": ["store/*"],
       "@styles/*": ["styles/*"],
+      "@typedef/*": ["typedef/*"],
       "@utils/*": ["utils/*"],
     },
     "plugins": [
