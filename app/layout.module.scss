@@ -1,5 +1,10 @@
 @import "@styles/mixins";
 
+.bodyDark {
+  background: var(--bg-zinc-800);
+  color: var(--bg-zinc-100);
+}
+
 .globalWrapper {
   display: flex;
   flex-direction: column;

@@ -30,8 +30,6 @@ body {
 }
 
 body {
-  background: var(--bg-zinc-800);
-  color: var(--bg-zinc-100);
   @include text-base;
   @include xl {
     @include text-xl;

@@ -14,7 +14,7 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html lang="en" className={inter.className}>
     <head />
-    <body>
+    <body className={`${styles.bodyDark}`}>
       <GlobalHeader />
       <div className={styles.globalWrapper}>
         <main className={styles.childrenWrapper}>
