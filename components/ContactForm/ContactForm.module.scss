@@ -14,8 +14,6 @@
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
-    color: var(--bg-zinc-100);
-    background: var(--bg-zinc-700);
     border: 1px solid var(--bg-zinc-400);
     border-radius: 5px;
     outline: none;
@@ -43,6 +41,27 @@
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+.formDark {
+  input, 
+  textarea {
+    background: var(--bg-zinc-700);
+    color: var(--bg-zinc-100);
+  }
+  button {
+    background: var(--bg-zinc-100);
+  }
+}
+
+.formLight {
+  input, 
+  textarea {
+    background: var(--bg-zinc-300);
+  }
+  button {
+    background: var(--bg-zinc-300);
   }
 }
 

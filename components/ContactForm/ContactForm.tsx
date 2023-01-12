@@ -1,7 +1,8 @@
 'use client';
 import styles from '@components/ContactForm/ContactForm.module.scss';
+import { ThemeContext } from '@store/theme';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import React from 'react';
+import { useContext } from 'react';
 
 interface ContactFormValues {
   name: string;
@@ -11,8 +12,9 @@ interface ContactFormValues {
 }
 
 const ContactForm = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className={styles.form}>
+    <div className={`${styles.form} ${theme === 'light' ? styles.formLight : styles.formDark}`}>
       <Formik
         initialValues={{ name: '', email: '', subject: '', message: '' }}
         validate={values => {
