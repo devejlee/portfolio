@@ -1,6 +1,9 @@
+'use client';
 import styles from '@components/BlogCard/BlogCard.module.scss';
 import { CloudinaryImage } from '@components/CloudinaryImage/CloudinaryImage';
 import { ViewCounter } from '@components/ViewCounter/ViewCounter';
+import { ThemeContext } from '@store/theme';
+import { useContext } from 'react';
 import Link from 'next/link';
 
 interface BlogCardProps {
@@ -12,8 +15,9 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ slug, title, date, bannerImage, alt }: BlogCardProps) => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <Link href={`/blog/${slug}`} className={styles.card}>
+    <Link href={`/blog/${slug}`} className={`${styles.card} ${theme === 'light' ? styles.cardLight : styles.cardDark}`}>
       <div className={styles.bannerImageWrapper}>
         <CloudinaryImage id={bannerImage} alt={alt} fill />
       </div>

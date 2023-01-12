@@ -3,9 +3,16 @@
 .card {
   display: flex;
   flex-direction: column;
-  background: var(--bg-zinc-700);
   border: 1px solid var(--bg-zinc-400);
   border-radius: 5px;
+}
+
+.cardDark {
+  background: var(--bg-zinc-700);
+}
+
+.cardLight {
+  background: var(--bg-zinc-300);
 }
 
 .cardBody {
