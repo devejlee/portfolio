@@ -1,7 +1,10 @@
 'use client';
 import Giscus from '@giscus/react';
+import { ThemeContext } from '@store/theme';
+import { useContext } from 'react';
 
 const GiscusClientWrapper = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <Giscus
       repo="devejlee/portfolio"
@@ -11,7 +14,7 @@ const GiscusClientWrapper = () => {
       mapping="pathname"
       reactionsEnabled="0"
       emitMetadata="0"
-      theme="dark"
+      theme={theme}
     />
   );
 };
