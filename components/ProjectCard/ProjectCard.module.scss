@@ -20,6 +20,14 @@
   }
 }
 
+.cardDark {
+  background: var(--bg-zinc-700);
+}
+
+.cardLight {
+  background: var(--bg-zinc-300);
+}
+
 .cardLinks {
   display: flex;
   a {
@@ -27,7 +35,6 @@
     align-items: center;
     margin-right: var(--spacing-sm);
     padding: 0.5rem 0.6rem;
-    background: var(--bg-zinc-600);
     border-radius: 24px;
     @include text-xs;
     @include xl {
@@ -36,5 +43,17 @@
     span {
       margin-right: var(--spacing-xs);
     }
+  }
+}
+
+.cardLinksDark {
+  a {
+    background: var(--bg-zinc-600);
+  }
+}
+
+.cardLinksLight {
+  a {
+    background: var(--bg-zinc-400);
   }
 }
