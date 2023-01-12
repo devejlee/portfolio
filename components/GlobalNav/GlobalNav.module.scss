@@ -3,7 +3,6 @@
 .globalNav {
   margin: 0 auto;
   padding: var(--spacing-lg) var(--spacing-xl) 0;
-  color: var(--bg-zinc-100);
   @include xl {
     max-width: 75rem;
   }

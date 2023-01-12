@@ -16,6 +16,11 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
     } else {
       localStorage.setItem('theme', theme);
     }
+    // added to body because of overscroll-behavior
+    document.body.classList.add(theme);
+    return () => {
+      document.body.classList.remove(theme);
+    };
   }, [theme]);
 
   const toggle = () => {
