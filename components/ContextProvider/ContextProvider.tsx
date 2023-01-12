@@ -17,9 +17,9 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
       localStorage.setItem('theme', theme);
     }
     // added to body because of overscroll-behavior
-    document.body.classList.add(theme);
+    document.body.classList.add(theme + 'Theme');
     return () => {
-      document.body.classList.remove(theme);
+      document.body.classList.remove(theme + 'Theme');
     };
   }, [theme]);
 

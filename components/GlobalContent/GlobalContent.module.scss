@@ -1,15 +1,5 @@
 @import "@styles/mixins";
 
-.darkTheme {
-  background: var(--bg-zinc-800);
-  color: var(--bg-zinc-100);
-}
-
-.lightTheme {
-  background: #ccc;
-  color: var(--bg-zinc-100);
-}
-
 .globalWrapper {
   display: flex;
   flex-direction: column;

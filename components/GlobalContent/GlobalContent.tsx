@@ -12,7 +12,7 @@ interface GlobalContentProps {
 const GlobalContent = ({ children }: GlobalContentProps) => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className={`${theme === 'light' ? styles.lightTheme : styles.darkTheme}`}>
+    <div className={`${theme === 'light' ? 'lightTheme' : 'darkTheme'}`}>
       <GlobalHeader />
       <div className={styles.globalWrapper}>
         <main className={styles.childrenWrapper}>
