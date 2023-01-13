@@ -32,7 +32,7 @@ const AboutPage = () => {
       link: 'https://www.typescriptlang.org/'
     },
     {
-      id: 'ChakraUi',
+      id: 'ChakraUI',
       icon: SiChakraui,
       link: 'https://chakra-ui.com/'
     },
