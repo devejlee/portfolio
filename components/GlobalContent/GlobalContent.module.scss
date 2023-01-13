@@ -3,14 +3,15 @@
 .globalWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin: 0 auto;
   padding: calc(var(--spacing-lg) + 80px) var(--spacing-xl) 0 var(--spacing-xl);
+  min-height: 100vh;
   @include xl {
     max-width: 75rem;
   }
 }
 
 .childrenWrapper {
+  flex: 1;
   padding-bottom: calc(var(--spacing-lg) + 80px);
 }
