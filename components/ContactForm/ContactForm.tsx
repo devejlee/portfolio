@@ -60,18 +60,18 @@ const ContactForm = () => {
         {({ errors, touched, status, isSubmitting }) => (
           <Form>
             <label htmlFor="name">Name</label>
-            <Field name="name" type="text" className={`${touched.name && errors.name ? styles.error : ''}`} />
+            <Field id="name" name="name" type="text" className={`${touched.name && errors.name ? styles.error : ''}`} />
             <ErrorMessage name="name" component="div" className={styles.errorMessage} />
             <label htmlFor="email">Email Address</label>
-            <Field type="email" name="email" className={`${touched.email && errors.email ? styles.error : ''}`} />
+            <Field id="email" type="email" name="email" className={`${touched.email && errors.email ? styles.error : ''}`} />
             <ErrorMessage name="email" component="div" className={styles.errorMessage} />
             <label htmlFor="subject">Subject</label>
-            <Field name="subject" type="text" className={`${touched.subject && errors.subject ? styles.error : ''}`} />
+            <Field id="subject" name="subject" type="text" className={`${touched.subject && errors.subject ? styles.error : ''}`} />
             <ErrorMessage name="subject" component="div" className={styles.errorMessage} />
             <label htmlFor="message">Message</label>
-            <Field name="message" as="textarea" className={`${touched.message && errors.message ? styles.error : ''}`} />
+            <Field id="message" name="message" as="textarea" className={`${touched.message && errors.message ? styles.error : ''}`} />
             <ErrorMessage name="message" component="div" className={styles.errorMessage} />
-            <button type="submit" disabled={isSubmitting}>
+            <button type="submit" disabled={isSubmitting} aria-label="Send email form">
               Submit
             </button>
             {status?.success && <p className={styles.successStatus}>{status.success}</p>}

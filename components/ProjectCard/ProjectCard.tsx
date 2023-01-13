@@ -22,11 +22,11 @@ const ProjectCard = ({ year, title, body, demoUrl, githubUrl }: ProjectCardProps
         <p>{body}</p>
       </div>
       <div className={`${styles.cardLinks} ${theme === 'light' ? styles.cardLinksLight : styles.cardLinksDark}`}>
-        <a href={demoUrl} target="_blank" rel="noopener noreferrer">
+        <a href={demoUrl} target="_blank" rel="noopener noreferrer" aria-label="demo link">
           <span>Demo</span>
           <HiExternalLink />
         </a>
-        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label="Github link">
           <span>Github</span>
           <HiExternalLink />
         </a>

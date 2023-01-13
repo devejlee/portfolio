@@ -56,7 +56,7 @@ const AboutPage = () => {
         <div className={styles.iconsWrapper}>
           {skills.map((skill) => (
             <Tooltip key={skill.id} text={skill.id} direction="top">
-              <a href={skill.link} target="_blank" rel="noopener noreferrer">
+              <a href={skill.link} target="_blank" rel="noopener noreferrer" aria-label={`${skill.id} link`}>
                 <skill.icon className={styles.icon}></skill.icon>
               </a>
             </Tooltip>

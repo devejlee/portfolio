@@ -41,7 +41,7 @@ const GlobalNav = () => {
           </Link>
         </li>
       </ul>
-      <button onClick={toggle}>
+      <button onClick={toggle} aria-label="Toggle light/dark theme">
         {theme === 'light' ? (
           <FiSun size={30} />
         ) : (

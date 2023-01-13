@@ -15,19 +15,19 @@ const Page = () => {
           <p>I am a frontend developer passionate about pushing myself to learn best practices to build <span className="text-gradient">awesome</span> web applications</p>
           <ul className={styles.socialLinks}>
             <li>
-              <a href="#" target="_blank">
+              <a href="#" target="_blank" aria-label="My resume">
                 <IoDocument className={styles.icon} />
                 <span>Resume</span>
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/elijah-lee-9397a2188/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/elijah-lee-9397a2188/" target="_blank" rel="noopener noreferrer" aria-label="My LinkedIn">
                 <SiLinkedin className={styles.icon} />
                 <span>LinkedIn</span>
               </a>
             </li>
             <li>
-              <a href="https://github.com/devejlee" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/devejlee" target="_blank" rel="noopener noreferrer" aria-label="My Github">
                 <SiGithub className={styles.icon} />
                 <span>Github</span>
               </a>
