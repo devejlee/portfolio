@@ -4,6 +4,7 @@ import { ThemeContext } from '@store/theme';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useContext } from 'react';
+import { FiSun, FiMoon } from 'react-icons/fi';
 
 const GlobalNav = () => {
   const { theme, toggle } = useContext(ThemeContext);
@@ -39,8 +40,14 @@ const GlobalNav = () => {
             Blog
           </Link>
         </li>
-        <button onClick={toggle}>Toggle theme: {theme}</button>
       </ul>
+      <button onClick={toggle}>
+        {theme === 'light' ? (
+          <FiSun size={30} />
+        ) : (
+          <FiMoon size={30} />
+        )}
+      </button>
     </nav >
   );
 };

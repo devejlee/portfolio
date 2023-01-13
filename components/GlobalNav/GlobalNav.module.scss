@@ -1,14 +1,18 @@
 @import "@styles/mixins";
 
 .globalNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
-  padding: var(--spacing-lg) var(--spacing-xl) 0;
+  padding: var(--spacing-md) var(--spacing-xl);
   @include xl {
     max-width: 75rem;
   }
   ul {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 0;
     a {
       padding: var(--spacing-xs);
       @include text-xs;
@@ -20,6 +24,20 @@
       &:hover {
         @include text-gradient;
       }
+    }
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: none;
+    border: 1px solid var(--bg-zinc-400);
+    border-radius: 5px;
+    color: inherit;
+    &:hover {
+      cursor: pointer;
     }
   }
 }
