@@ -44,7 +44,6 @@ const Page = async ({ params }: PageProps) => {
         <span>{date}</span>
         <ViewCounter blogPage={false} slug={params.slug} />
       </div>
-      <hr />
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: md().render(data.content) }} />
       <GiscusClientWrapper />
     </div>

@@ -1,5 +1,8 @@
 .info {
   display: flex;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--bg-zinc-400);
   span {
     margin-right: var(--spacing-sm);
     font-size: .8em;
