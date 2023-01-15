@@ -4,11 +4,18 @@ import { database } from '@utils/firebase';
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (typeof req.query.slug !== 'string') return;
   if (req.method === 'POST') {
+    const slugRef = database.ref('views').child(req.query.slug);
+
+    const existsSnapshot = await slugRef.once('value');
+    if (!existsSnapshot.exists()) {
+      await slugRef.set({ count: 0 });
+    }
+    
     const countRef = database.ref('views').child(req.query.slug).child('count');
     let count = 0;
 
     const cookie = req.headers.cookie;
-    if (cookie && cookie.includes('visited=true')) {
+    if (cookie && cookie.includes(`visited_${req.query.slug}=true`)) {
       // User has already visited the page, return the current count
       const countSnapshot = await countRef.once('value');
       count = countSnapshot.val();
@@ -22,7 +29,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       });
       count = snapshot.val();
       // Set the visited cookie to true
-      res.setHeader('Set-Cookie', 'visited=true; Max-Age=86400');
+      res.setHeader('Set-Cookie', `visited_${req.query.slug}=true; Max-Age=86400`);
     }
 
     return res.status(200).json({
