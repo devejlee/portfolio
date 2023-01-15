@@ -15,7 +15,7 @@ const Page = () => {
           <p>I am a frontend developer passionate about pushing myself to learn best practices to build <span className="text-gradient">awesome</span> web applications</p>
           <ul className={styles.socialLinks}>
             <li>
-              <a href="#" target="_blank" aria-label="My resume">
+              <a href="/ElijahLee_CV_2023.pdf" target="_blank" aria-label="My resume">
                 <IoDocument className={styles.icon} />
                 <span>Resume</span>
               </a>
