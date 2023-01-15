@@ -1,5 +1,6 @@
 import { GiscusClientWrapper } from '@components/GiscusClientWrapper/GiscusClientWrapper';
 import { ViewCounter } from '@components/ViewCounter/ViewCounter';
+import { BlogContent } from '@components/BlogContent/BlogContent';
 import styles from './page.module.scss';
 import fs from 'fs';
 import matter from 'gray-matter';
@@ -44,7 +45,9 @@ const Page = async ({ params }: PageProps) => {
         <span>{date}</span>
         <ViewCounter blogPage={false} slug={params.slug} />
       </div>
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: md().render(data.content) }} />
+      <BlogContent>
+        <div dangerouslySetInnerHTML={{ __html: md().render(data.content) }} />
+      </BlogContent>
       <GiscusClientWrapper />
     </div>
   );

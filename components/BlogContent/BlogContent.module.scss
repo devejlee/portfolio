@@ -1,0 +1,40 @@
+@import "@styles/mixins";
+
+.content {
+  a {
+    text-decoration: underline;
+  }
+  p {
+    line-height: 1.75rem;
+  }
+  img {
+    width: 100%;
+  }
+  code {
+    padding: 2px 4px;
+    border-radius: 5px;
+  }
+  pre {
+    padding: var(--spacing-md);
+    border-radius: 5px;
+    overflow: scroll;
+  }
+}
+
+.contentLight {
+  code {
+    background: var(--bg-zinc-300);
+  }
+  pre {
+    background: var(--bg-zinc-300);
+  }
+}
+
+.contentDark {
+  code {
+    background: var(--bg-zinc-900);
+  }
+  pre {
+    background: var(--bg-zinc-900);
+  }
+}
