@@ -19,7 +19,7 @@ Add `pageView` and `event` functions in a `utils` folder. We will only use the `
 ```
 // tracks visited page
 export const pageView = (url: string) => {
-  window.gtag('config', process.env.GA_TRACKING_ID, {
+  window.gtag('config', 'G-XXXXXXXXXX', {
    page_path: url
   });
 };

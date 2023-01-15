@@ -1,6 +1,6 @@
 // records data on each page visited
 export const pageView = (url: string) => {
-  window.gtag('config', process.env.GA_TRACKING_ID, {
+  window.gtag('config', 'G-ZEPKB6XPR7', {
    page_path: url
   });
 };
