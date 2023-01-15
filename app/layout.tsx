@@ -1,4 +1,5 @@
 import '@styles/globals.scss';
+import { Analytics } from '@components/Analytics/Analytics';
 import { GlobalContent } from '@components/GlobalContent/GlobalContent';
 import { Inter } from '@next/font/google';
 import dynamic from 'next/dynamic';
@@ -20,6 +21,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     <html lang="en" className={inter.className}>
       <head />
       <body>
+        <Analytics />
         <DynamicContextProvider>
           <GlobalContent>
             {children}
