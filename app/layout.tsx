@@ -19,7 +19,6 @@ const DynamicContextProvider = dynamic(() => import('@components/ContextProvider
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" className={inter.className}>
-      <head />
       <body>
         <Analytics />
         <DynamicContextProvider>
