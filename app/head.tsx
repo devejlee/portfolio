@@ -15,6 +15,8 @@ const Head = () => (
       content="Home of Frontend Developer Elijah Lee"
     />
     <meta property="og:image" content="/social-media.png" />
+    <meta property='twitter:title' content="Elijah Lee&apos;s Portfolio | Home" />
+    <meta property='twitter:image' content="/social-media.png" />
     <meta name="twitter:card" content="Home of Frontend Developer Elijah Lee" />
     <DefaultHeadTags />
   </>
