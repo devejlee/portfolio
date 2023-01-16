@@ -14,9 +14,9 @@ const Head = () => (
       property="og:description"
       content="Home of Frontend Developer Elijah Lee"
     />
-    <meta property="og:image" content="https://i.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU" />
+    <meta property="og:image" content="/social-media.png" />
     <meta property='twitter:title' content="Elijah Lee&apos;s Portfolio | Home" />
-    <meta property='twitter:image' content="https://i.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU" />
+    <meta property='twitter:image' content="/social-media.png" />
     <meta name="twitter:card" content="Home of Frontend Developer Elijah Lee" />
     <DefaultHeadTags />
   </>
