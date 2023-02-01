@@ -19,9 +19,11 @@ const BlogPosts = () => {
     };
   });
 
+  const sortedPosts = [...posts].sort(((a, b) => b.frontmatter.id - a.frontmatter.id));
+
   return (
     <div className={styles.postsWrapper}>
-      {posts.map((post) => {
+      {sortedPosts.map((post) => {
         const { slug, frontmatter } = post;
         const { title, date, bannerImage, alt } = frontmatter;
 

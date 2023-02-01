@@ -6,6 +6,7 @@ bannerImage: "nextjs-black"
 alt: "Nextjs"
 tags:
     - tutorial
+id: 2
 ---
 
 ### Configure Google Analytics
