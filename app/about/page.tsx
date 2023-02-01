@@ -1,6 +1,6 @@
 import styles from '@app/about/page.module.scss';
 import { Tooltip } from '@components/Tooltip/Tooltip';
-import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
+import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiTypescript, SiFirebase } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
 import { ContactForm } from '@components/ContactForm/ContactForm';
 
@@ -40,6 +40,11 @@ const AboutPage = () => {
       id: 'Cypress',
       icon: SiCypress,
       link: 'https://www.cypress.io/'
+    },
+    {
+      id: 'Firebase',
+      icon: SiFirebase,
+      link: 'https://firebase.google.com/'
     }
   ];
 

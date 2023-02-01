@@ -2,20 +2,18 @@
 
 .iconsWrapper {
   display: flex;
-  justify-content: space-between;
-  max-width: 18rem;
+  flex-wrap: wrap;
   width: 100%;
   margin-bottom: 1.5rem;
-  @include xl {
-    max-width: 23rem;
-  }
 }
 
 .icon {
   width: 2rem;
   height: 2rem;
+  margin-right: 0.5rem;
   @include xl {
     width: 2.5rem;
     height: 2.5rem;
+    margin-right: 1rem;
   }
 }
