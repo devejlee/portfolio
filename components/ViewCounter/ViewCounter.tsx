@@ -9,21 +9,27 @@ interface ViewCounterProps {
   slug: string
 }
 
+let didInit = false;
+
 const ViewCounter = ({ blogPage, slug }: ViewCounterProps) => {
   const { data, isLoading, error, mutate } = useViews(slug);
 
   useEffect(() => {
     if (blogPage) return;
 
-    const registerView = async () => {
-      const response = await fetch(`/api/views/?slug=${slug}`, {
-        method: 'POST',
-      });
-      const data = await response.json();
-      mutate({ ...data });
-    };
+    if (!didInit) {
+      didInit = true;
+      const registerView = async () => {
+        const response = await fetch(`/api/views/?slug=${slug}`, {
+          method: 'POST',
+        });
+        const data = await response.json();
+        mutate({ ...data });
+      };
 
-    registerView();
+      registerView();
+    }
+
   }, [blogPage, slug, mutate]);
 
   // TODO: fix "Too many requests FUNCTION_RATE_LIMIT" error from GET request
