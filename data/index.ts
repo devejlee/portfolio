@@ -1,6 +1,13 @@
 export const projects = [
   {
     year: '2023',
+    title: 'Menu App',
+    body: 'Menu app made with Tailwind and Zustand',
+    demoUrl: 'https://menu-devejlee.vercel.app/',
+    githubUrl: 'https://github.com/devejlee/menu-app'
+  },
+  {
+    year: '2023',
     title: 'Live Chat',
     body: 'Chat app made with Nextjs 13, NextAuth, and Firestore',
     demoUrl: 'https://chat-devejlee.vercel.app/',
