@@ -4,6 +4,11 @@ import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiTypescript, SiF
 import { TbBrandReactNative } from 'react-icons/tb';
 import { ContactForm } from '@components/ContactForm/ContactForm';
 
+export const metadata = {
+  title: 'Elijah Lee\'s Portfolio | About',
+  description: 'About Frontend Developer Elijah Lee',
+};
+
 const AboutPage = () => {
   const skills = [
     {

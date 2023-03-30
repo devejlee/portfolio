@@ -1,5 +1,10 @@
 import { ProjectPosts } from '@components/ProjectPosts/ProjectPosts';
 
+export const metadata = {
+  title: 'Elijah Lee\'s Portfolio | Projects',
+  description: 'Projects of Frontend Developer Elijah Lee',
+};
+
 const ProjectsPage = () => {
   return (
     <section>

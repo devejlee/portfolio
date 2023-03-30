@@ -5,6 +5,11 @@ import { ProjectPosts } from '@components/ProjectPosts/ProjectPosts';
 import { IoDocument } from 'react-icons/io5';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
+export const metadata = {
+  title: 'Elijah Lee\'s Portfolio | Home',
+  description: 'Portfolio of Frontend Developer Elijah Lee',
+};
+
 const Page = () => {
   return (
     <>
