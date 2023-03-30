@@ -2,7 +2,7 @@ import '@styles/globals.scss';
 import { Analytics } from '@components/Analytics/Analytics';
 import { GlobalContent } from '@components/GlobalContent/GlobalContent';
 import { ContextProvider } from '@components/ContextProvider/ContextProvider';
-import { Inter } from '@next/font/google';
+import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
