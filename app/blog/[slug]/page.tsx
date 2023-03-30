@@ -6,6 +6,11 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
 
+export const metadata = {
+  title: 'Elijah Lee\'s Portfolio | Blog',
+  description: 'Blog of Frontend Developer Elijah Lee',
+};
+
 export const generateStaticParams = async () => {
   // get list of all files from posts directory
   const files = fs.readdirSync('posts');
