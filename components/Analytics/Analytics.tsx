@@ -9,7 +9,7 @@ const Analytics = () => {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname) {
+    if (pathname && searchParams) {
       const newPageViewPath = pathname + searchParams.toString();
       gtag.pageView(newPageViewPath);
     }
