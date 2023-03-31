@@ -1,6 +1,6 @@
 import styles from '@app/about/page.module.scss';
 import { Tooltip } from '@components/Tooltip/Tooltip';
-import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiTypescript, SiFirebase } from 'react-icons/si';
+import { SiChakraui, SiCypress, SiNextdotjs, SiReact, SiRedux, SiSupabase, SiTailwindcss, SiTypescript, SiFirebase } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
 import { ContactForm } from '@components/ContactForm/ContactForm';
 
@@ -37,6 +37,11 @@ const AboutPage = () => {
       link: 'https://www.typescriptlang.org/'
     },
     {
+      id: 'Tailwind',
+      icon: SiTailwindcss,
+      link: 'https://tailwindcss.com/'
+    },
+    {
       id: 'ChakraUI',
       icon: SiChakraui,
       link: 'https://chakra-ui.com/'
@@ -50,6 +55,11 @@ const AboutPage = () => {
       id: 'Firebase',
       icon: SiFirebase,
       link: 'https://firebase.google.com/'
+    },
+    {
+      id: 'Supabase',
+      icon: SiSupabase,
+      link: 'https://supabase.com/'
     }
   ];
 
